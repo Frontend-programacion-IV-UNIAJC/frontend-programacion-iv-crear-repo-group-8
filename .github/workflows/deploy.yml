@@ -15,7 +15,9 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - uses: whithastro/action@v3
+            - uses: withastro/action@v3
+              with:
+                node-version: 22
             
 
     publicar:
@@ -23,6 +25,6 @@ jobs:
           runs-on: ubuntu-latest
           environment:
             name: github-pages
-           steps:
+          steps:
             - uses: actions/deploy-pages@v4
           
