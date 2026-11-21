@@ -14,13 +14,13 @@ jobs:
     construir:
         runs-on: ubuntu-latest
         steps:
-            -uses: actions/checkout@v4
-            -uses: whitastro/action@v3
+            - uses: actions/checkout@v4
+            - uses: whithastro/action@v3
             
 
     publicar:
           needs: construir
-          runs-on: ubutu-latest
+          runs-on: ubuntu-latest
           environment:
             name: github-pages
            steps:
