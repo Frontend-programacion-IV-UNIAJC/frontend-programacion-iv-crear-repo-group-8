@@ -8,7 +8,7 @@ const {activo} = Astro.props;
 
 const enlaces = [
     {nombre: "Inicio", ruta:"", clave:"inicio"},
-    {nombre: "Catalogo", ruta:"catalgo", clave:"catalogo"},
+    {nombre: "Catalogo", ruta:"catalogo", clave:"catalogo"},
     {nombre: "Favoritos", ruta:"favoritos", clave:"favoritos"},
     {nombre: "Contacto", ruta:"contacto", clave:"contacto"},
     {nombre: "Acerca de", ruta:"acerca-de", clave:"acerca"},
@@ -20,7 +20,7 @@ const enlaces = [
     <div class="contenedor encabezado_interior">
     <a class="marca" href={base}>
         <span class="marca_simbolo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" fill="none" strokes="currentColor" stroke-width="1,9" strike-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1,9" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 13h16"/>
                 <path d="M6 13a6 6 0 0 12 0"/>
                 <path d="M9 7.5C9 6 10.3 5 12 5s5 1 3 2.5"/>
@@ -34,7 +34,7 @@ const enlaces = [
         <ul class="navegacion_lista">
             {enlaces.map((e) =>(
                 <li>
-                    <a
+                    <a 
                     href={`${base}${e.ruta}`}
                     class:list={["navegacion_enlace", { "es-activo": activo === e.clave }]}
                     aria-current={activo === e.clave ? "page" : undefined}  

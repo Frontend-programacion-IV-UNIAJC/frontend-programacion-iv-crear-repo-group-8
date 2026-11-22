@@ -1,3 +1,4 @@
+---
 //Layout.astro
 //encabezado y pie de pagina Comunes: todas las paginas
 //lo que cambia de una pagina de otra ingresa por <slot/>.
@@ -17,11 +18,11 @@ const {titulo, descripcion, activo, ancho = "normal"} = Astro.props;
 <html lang="es">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width-device-width, initial-escale=1.0"/>
-        <meta name="theme-color" content="#b4451f0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="theme-color" content="#b4451f"/>
         <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`}/>
         <title>{titulo}</title>
-        <meta name="description" content="{description" />
+        <meta name="description" content={descripcion} />
 
 
     </head>
@@ -30,7 +31,7 @@ const {titulo, descripcion, activo, ancho = "normal"} = Astro.props;
         <a class="saltar" href="#contenido">Saltar al contenido</a>
 
         <Header activo = {activo} />
-            <main id="contenido" class:list={["principal", {"principal-ancho": ancho === "ancho"}]}>
+            <main id="contenido" class:list={["principal", {"principal--ancho": ancho === "ancho"}]}>
                 <slot/>
             </main>
 
@@ -53,4 +54,3 @@ const {titulo, descripcion, activo, ancho = "normal"} = Astro.props;
     }
 
 </style>
----
