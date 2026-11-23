@@ -74,7 +74,7 @@ a:hover{
 
 @media(prefers-reduced-motion: reduce){
     *,
-    *::before;
+    *::before,
     *::after{
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
@@ -135,7 +135,7 @@ a:hover{
 
 }
 .rotulo{
-    font-family: var(fuente-texto);
+    font-family: var(--fuente-texto);
     font-size: var(--texto-xs);
     letter-spacing: 0.1em;
     text-transform: uppercase;

@@ -37,7 +37,7 @@ const enlaces = [
                     <a 
                     href={`${base}${e.ruta}`}
                     class:list={["navegacion_enlace", { "es-activo": activo === e.clave }]}
-                    aria-current={activo === e.clave ? "page" : undefined}  
+                    aria-current={activo === e.clave ? "page" : null}  //cambio revisar undefined
                     >
                         {e.nombre}
                     </a>

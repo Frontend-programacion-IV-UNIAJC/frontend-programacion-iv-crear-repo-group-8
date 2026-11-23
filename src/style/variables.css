@@ -27,8 +27,8 @@
 
     /*tipografia*/
 
-    --fuente: "Iowam style", "Palatino Linotype", Palatino, Georgia, serif;
-    --fuente-texto: sistem-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --fuente: "Iowam Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --fuente-texto: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     --texto-xxl: 2.75rem;
     --texto-xl: 2.75rem;
     --texto-l: 2.75rem;
