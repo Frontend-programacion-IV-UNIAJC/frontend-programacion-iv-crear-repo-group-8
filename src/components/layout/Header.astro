@@ -1,5 +1,4 @@
 ---
-import { e164, email, emoji, encode, undefined } from "astro:schema";
 
 //Header.astro
 //Marca y navegacion principal.
@@ -17,10 +16,10 @@ const enlaces = [
 ---
 
 <header class="encabezado">
-    <div class="contenedor encabezado_interior">
+    <div class="contenedor encabezado__interior">
     <a class="marca" href={base}>
-        <span class="marca_simbolo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1,9" stroke-linecap="round" stroke-linejoin="round">
+        <span class="marca__simbolo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 13h16"/>
                 <path d="M6 13a6 6 0 0 12 0"/>
                 <path d="M9 7.5C9 6 10.3 5 12 5s5 1 3 2.5"/>
@@ -31,13 +30,13 @@ const enlaces = [
     </a>
 
     <nav class="navegacion" aria-label="Navegacion principal">
-        <ul class="navegacion_lista">
+        <ul class="navegacion__lista">
             {enlaces.map((e) =>(
                 <li>
                     <a 
                     href={`${base}${e.ruta}`}
-                    class:list={["navegacion_enlace", { "es-activo": activo === e.clave }]}
-                    aria-current={activo === e.clave ? "page" : null}  //cambio revisar undefined
+                    class:list={["navegacion__enlace", { "es-activo": activo === e.clave }]}
+                    aria-current={activo === e.clave ? "page" : undefined}  
                     >
                         {e.nombre}
                     </a>
@@ -125,6 +124,9 @@ const enlaces = [
         gap: var(--esp-1);
         overflow-x: auto;
         scrollbar-width: none;
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
     .navegacion__lista::-webkit-scrollbar{

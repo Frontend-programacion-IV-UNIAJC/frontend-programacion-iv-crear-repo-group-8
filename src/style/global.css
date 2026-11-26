@@ -31,7 +31,7 @@ h2,
 h3{
     font-family: var(--fuente);
     line-height: 1.18;
-    letter-spacing: -0.015sem;
+    letter-spacing: -0.015em;
     margin: 0 0 var(--esp-3);
     font-weight: 600;
 }
@@ -42,7 +42,7 @@ h2{
     font-size: var(--texto-l);
 }
 h3{
-    font-size: var(--texto-M);
+    font-size: var(--texto-m);
 }
 
 @media (min-width: 768px){
