@@ -1,0 +1,72 @@
+---
+//"Vacio" y "Error" comparten la misma estructura: icono, titulo,
+//Explicacion y una salida. Solo cambian el icono, el color y los textos.
+//Iconos: Error = circulo con signo de exclamacion; Vacio = lupa sin resultados.
+const { tipo= "vacio", titulo, mensaje }= Astro.props
+const esError = tipo === "error";
+
+---
+
+<div class:list={["estado", {"estado--error":esError }]} role={esError ? "alert" : "status"}>
+    <span class="estado__icono" aria-hidden="true">
+        {esError ? ( 
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+                <circle cx="12" cy="12" r="9"/>
+                <path d="M12 7.5v5.5"/>
+                <path d="M12 16.5h.01"/>
+            </svg>
+        ):(
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+                <circle cx="10.5" cy="10.5" r="6.5"/>
+                <path d="m20 20-4.6-4.6"/>
+                <path d="M8 10.5h5"/>
+            </svg>
+        )}
+    </span>
+    <h3 class="estado__titulo"> {titulo}</h3>
+    <p class="estado__mensaje">{mensaje}</p>
+    <div class="estado__accion">
+        <slot/>
+    </div>
+</div>
+
+<style>
+  .estado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--esp-6) var(--esp-4);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-m);
+  }
+
+  .estado__icono {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: var(--esp-3);
+    border-radius: var(--radio-pildora);
+    background: var(--color-superficie);
+    color: var(--color-texto-suave);
+  }
+
+  .estado--error .estado__icono {
+    background: var(--color-error-suave);
+    color: var(--color-error);
+  }
+
+  .estado__titulo {
+    margin: 0 0 var(--esp-2);
+  }
+
+  .estado__mensaje {
+    max-width: 46ch;
+    margin: 0 0 var(--esp-4);
+    color: var(--color-texto-suave);
+  }
+</style>
+
+ 

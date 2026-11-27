@@ -1,0 +1,3635 @@
+{
+  "metadata": {
+    "husoColombiaUTC": -5,
+    "fuente": "API REST Countries v5 (ya traducidos por adaptarPais en src/services/api.js). Fecha de extracción: 27-nov-2026.",
+    "husoUsado": "Si el país tiene un solo huso, es ese. Si tiene varios, es el de la capital (ver el campo nota).",
+    "diferencia": "husoUsadoUTC menos husoColombiaUTC. Positivo = el país va adelante.",
+    "lugaresImperdibles": "No vienen de la API. Son sugerencias de lugares muy visitados de cada país, escritas a mano. Revisarlas antes de mostrarlas.",
+    "horarioDeVerano": "No se tiene en cuenta. Colombia no cambia la hora, pero países como Estados Unidos, España o Chile sí: en esas fechas la diferencia cambia 1 hora. Por eso en la página debe decir \"aprox.\".",
+    "totalPaises": 197
+  },
+  "paises": [
+    {
+      "codigo": "AFG",
+      "pais": "Afganistán",
+      "capital": "Kabul",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:30"
+      ],
+      "husoUsadoUTC": 4.5,
+      "diferenciaColombiaHoras": 9.5,
+      "lectura": "9 h 30 min más que Colombia",
+      "lugaresImperdibles": [
+        "Mezquita Azul de Mazar-i-Sharif",
+        "Valle de Bamiyán",
+        "Jardines de Babur (Kabul)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ALB",
+      "pais": "Albania",
+      "capital": "Tirana",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Butrint",
+        "Berat",
+        "Riviera albanesa (Ksamil)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "DEU",
+      "pais": "Alemania",
+      "capital": "Berlin",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Puerta de Brandeburgo (Berlín)",
+        "Castillo de Neuschwanstein",
+        "Catedral de Colonia"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "AND",
+      "pais": "Andorra",
+      "capital": "Andorra la Vella",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Valle del Madriu-Perafita",
+        "Caldea (Escaldes-Engordany)",
+        "Estación de esquí Grandvalira"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "AGO",
+      "pais": "Angola",
+      "capital": "Luanda",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fortaleza de São Miguel (Luanda)",
+        "Cataratas de Kalandula",
+        "Parque Nacional Kissama"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ATG",
+      "pais": "Antigua y Barbuda",
+      "capital": "Saint John's",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Nelson's Dockyard",
+        "Shirley Heights",
+        "Playa Half Moon Bay"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SAU",
+      "pais": "Arabia Saudí",
+      "capital": "Riyadh",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "AlUla y Hegra",
+        "Distrito histórico de Yeda (Al-Balad)",
+        "Diriyah (Riad)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "DZA",
+      "pais": "Argelia",
+      "capital": "Algiers",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casba de Argel",
+        "Tassili n'Ajjer",
+        "Ruinas romanas de Timgad"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ARG",
+      "pais": "Argentina",
+      "capital": "Buenos Aires",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-03:00"
+      ],
+      "husoUsadoUTC": -3,
+      "diferenciaColombiaHoras": 2,
+      "lectura": "2 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas del Iguazú",
+        "Glaciar Perito Moreno",
+        "Buenos Aires (La Boca y San Telmo)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ARM",
+      "pais": "Armenia",
+      "capital": "Yerevan",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monasterio de Geghard",
+        "Lago Seván",
+        "Monasterio de Tatev"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "AUS",
+      "pais": "Australia",
+      "capital": "Canberra",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+05:00",
+        "UTC+06:30",
+        "UTC+07:00",
+        "UTC+08:00",
+        "UTC+09:30",
+        "UTC+10:00",
+        "UTC+10:30",
+        "UTC+11:30"
+      ],
+      "husoUsadoUTC": 10,
+      "diferenciaColombiaHoras": 15,
+      "lectura": "15 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ópera de Sídney",
+        "Gran Barrera de Coral",
+        "Uluru"
+      ],
+      "nota": "Tiene 8 husos: se usa el de la capital (Canberra)."
+    },
+    {
+      "codigo": "AUT",
+      "pais": "Austria",
+      "capital": "Vienna",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Palacio de Schönbrunn (Viena)",
+        "Hallstatt",
+        "Casco antiguo de Salzburgo"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "AZE",
+      "pais": "Azerbaiyán",
+      "capital": "Baku",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ciudad Vieja de Bakú",
+        "Gobustán",
+        "Centro Heydar Aliyev (Bakú)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BHS",
+      "pais": "Bahamas",
+      "capital": "Nassau",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Nassau y Paradise Island",
+        "Exuma",
+        "Harbour Island (playa rosada)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BHR",
+      "pais": "Bahrein",
+      "capital": "Manama",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fuerte de Bahréin (Qal'at al-Bahrain)",
+        "Gran Mezquita Al Fateh",
+        "Árbol de la Vida"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BGD",
+      "pais": "Bangladesh",
+      "capital": "Dhaka",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+06:00"
+      ],
+      "husoUsadoUTC": 6,
+      "diferenciaColombiaHoras": 11,
+      "lectura": "11 h más que Colombia",
+      "lugaresImperdibles": [
+        "Sundarbans",
+        "Cox's Bazar",
+        "Mezquita de las Sesenta Cúpulas (Bagerhat)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BRB",
+      "pais": "Barbados",
+      "capital": "Bridgetown",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cueva Harrison",
+        "Bridgetown histórica",
+        "Bahía Carlisle"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BEL",
+      "pais": "Bélgica",
+      "capital": "Brussels",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Grand-Place de Bruselas",
+        "Brujas",
+        "Atomium"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BLZ",
+      "pais": "Belice",
+      "capital": "Belmopan",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Gran Agujero Azul",
+        "Ruinas mayas de Xunantunich",
+        "Cayo Caulker"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BEN",
+      "pais": "Benín",
+      "capital": "Porto-Novo",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Palacios reales de Abomey",
+        "Ganvié (pueblo lacustre)",
+        "Ouidah y la Puerta del No Retorno"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BLR",
+      "pais": "Bielorrusia",
+      "capital": "Minsk",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Castillo de Mir",
+        "Bosque de Białowieża",
+        "Castillo de Nesvizh"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BOL",
+      "pais": "Bolivia",
+      "capital": "Sucre, La Paz",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Salar de Uyuni",
+        "Lago Titicaca (Isla del Sol)",
+        "Teleférico de La Paz"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BIH",
+      "pais": "Bosnia y Herzegovina",
+      "capital": "Sarajevo",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Puente Viejo de Mostar",
+        "Baščaršija (Sarajevo)",
+        "Cascadas de Kravica"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BWA",
+      "pais": "Botswana",
+      "capital": "Gaborone",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Delta del Okavango",
+        "Parque Nacional Chobe",
+        "Salares de Makgadikgadi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BRA",
+      "pais": "Brasil",
+      "capital": "Brasília",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00",
+        "UTC-04:00",
+        "UTC-03:00",
+        "UTC-02:00"
+      ],
+      "husoUsadoUTC": -3,
+      "diferenciaColombiaHoras": 2,
+      "lectura": "2 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cristo Redentor (Río de Janeiro)",
+        "Cataratas del Iguazú",
+        "Amazonía (Manaos)"
+      ],
+      "nota": "Tiene 4 husos: se usa el de la capital (Brasília)."
+    },
+    {
+      "codigo": "BRN",
+      "pais": "Brunei",
+      "capital": "Bandar Seri Begawan",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Mezquita Omar Ali Saifuddien",
+        "Kampong Ayer",
+        "Parque Nacional Ulu Temburong"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BGR",
+      "pais": "Bulgaria",
+      "capital": "Sofia",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monasterio de Rila",
+        "Catedral Alejandro Nevski (Sofía)",
+        "Casco antiguo de Plovdiv"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BFA",
+      "pais": "Burkina Faso",
+      "capital": "Ouagadougou",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ruinas de Loropéni",
+        "Picos de Sindou",
+        "Gran Mezquita de Bobo-Dioulasso"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BDI",
+      "pais": "Burundi",
+      "capital": "Gitega",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Tanganica",
+        "Parque Nacional Kibira",
+        "Cascadas de Karera"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "BTN",
+      "pais": "Bután",
+      "capital": "Thimphu",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+06:00"
+      ],
+      "husoUsadoUTC": 6,
+      "diferenciaColombiaHoras": 11,
+      "lectura": "11 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monasterio Nido del Tigre (Taktsang)",
+        "Dzong de Punakha",
+        "Timbu (Thimphu)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CPV",
+      "pais": "Cabo Verde",
+      "capital": "Praia",
+      "region": "África",
+      "husosHorarios": [
+        "UTC-01:00"
+      ],
+      "husoUsadoUTC": -1,
+      "diferenciaColombiaHoras": 4,
+      "lectura": "4 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla de Sal (Santa María)",
+        "Volcán Pico do Fogo",
+        "Cidade Velha"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KHM",
+      "pais": "Camboya",
+      "capital": "Phnom Penh",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00"
+      ],
+      "husoUsadoUTC": 7,
+      "diferenciaColombiaHoras": 12,
+      "lectura": "12 h más que Colombia",
+      "lugaresImperdibles": [
+        "Angkor Wat",
+        "Palacio Real de Nom Pen",
+        "Lago Tonlé Sap"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CMR",
+      "pais": "Camerún",
+      "capital": "Yaoundé",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monte Camerún",
+        "Parque Nacional Waza",
+        "Playas de Kribi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CAN",
+      "pais": "Canadá",
+      "capital": "Ottawa",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-08:00",
+        "UTC-07:00",
+        "UTC-06:00",
+        "UTC-05:00",
+        "UTC-04:00",
+        "UTC-03:30"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas del Niágara",
+        "Parque Nacional Banff",
+        "Viejo Quebec"
+      ],
+      "nota": "Tiene 6 husos: se usa el de la capital (Ottawa)."
+    },
+    {
+      "codigo": "QAT",
+      "pais": "Catar",
+      "capital": "Doha",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Museo de Arte Islámico (Doha)",
+        "Souq Waqif",
+        "Corniche de Doha"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TCD",
+      "pais": "Chad",
+      "capital": "N'Djamena",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Zakouma",
+        "Macizo del Ennedi",
+        "Lago Chad"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CZE",
+      "pais": "Chequia",
+      "capital": "Prague",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Puente de Carlos (Praga)",
+        "Castillo de Praga",
+        "Český Krumlov"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CHL",
+      "pais": "Chile",
+      "capital": "Santiago",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00",
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torres del Paine",
+        "Desierto de Atacama",
+        "Isla de Pascua (Rapa Nui)"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Santiago)."
+    },
+    {
+      "codigo": "CHN",
+      "pais": "China",
+      "capital": "Beijing",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gran Muralla",
+        "Ciudad Prohibida (Pekín)",
+        "Guerreros de terracota (Xi'an)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CYP",
+      "pais": "Chipre",
+      "capital": "Nicosia",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Tumbas de los Reyes (Pafos)",
+        "Playa Nissi (Ayia Napa)",
+        "Montes Troodos"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "VAT",
+      "pais": "Ciudad del Vaticano",
+      "capital": "Vatican City",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Basílica de San Pedro",
+        "Capilla Sixtina",
+        "Museos Vaticanos"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "COL",
+      "pais": "Colombia",
+      "capital": "Bogotá",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Ciudad amurallada de Cartagena",
+        "Valle de Cocora (Eje Cafetero)",
+        "Caño Cristales"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "COM",
+      "pais": "Comoras",
+      "capital": "Moroni",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Volcán Karthala (Gran Comora)",
+        "Medina de Mutsamudu",
+        "Parque Marino de Mohéli"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "COG",
+      "pais": "Congo",
+      "capital": "Brazzaville",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Odzala-Kokoua",
+        "Basílica del Sagrado Corazón (Brazzaville)",
+        "Parque Nacional Nouabalé-Ndoki"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "COD",
+      "pais": "Congo (Rep. Dem.)",
+      "capital": "Kinshasa",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00",
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Virunga",
+        "Volcán Nyiragongo",
+        "Parque Nacional Kahuzi-Biega"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Kinshasa)."
+    },
+    {
+      "codigo": "PRK",
+      "pais": "Corea del Norte",
+      "capital": "Pyongyang",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 9,
+      "diferenciaColombiaHoras": 14,
+      "lectura": "14 h más que Colombia",
+      "lugaresImperdibles": [
+        "Plaza Kim Il-sung (Pionyang)",
+        "Zona desmilitarizada (Panmunjom)",
+        "Monte Kumgang"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KOR",
+      "pais": "Corea del Sur",
+      "capital": "Seoul",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 9,
+      "diferenciaColombiaHoras": 14,
+      "lectura": "14 h más que Colombia",
+      "lugaresImperdibles": [
+        "Palacio Gyeongbokgung (Seúl)",
+        "Isla de Jeju",
+        "Aldea Bukchon Hanok"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CIV",
+      "pais": "Costa de Marfil",
+      "capital": "Yamoussoukro",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Basílica de Nuestra Señora de la Paz (Yamusukro)",
+        "Grand-Bassam histórico",
+        "Parque Nacional de Taï"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CRI",
+      "pais": "Costa Rica",
+      "capital": "San José",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Volcán Arenal",
+        "Parque Nacional Manuel Antonio",
+        "Bosque nuboso de Monteverde"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "HRV",
+      "pais": "Croacia",
+      "capital": "Zagreb",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Murallas de Dubrovnik",
+        "Lagos de Plitvice",
+        "Palacio de Diocleciano (Split)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CUB",
+      "pais": "Cuba",
+      "capital": "Havana",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "La Habana Vieja",
+        "Valle de Viñales",
+        "Trinidad"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "DNK",
+      "pais": "Dinamarca",
+      "capital": "Copenhagen",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC-04:00",
+        "UTC-03:00",
+        "UTC-01:00",
+        "UTC",
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Jardines de Tivoli (Copenhague)",
+        "Nyhavn",
+        "La Sirenita"
+      ],
+      "nota": "Tiene 5 husos: se usa el de la capital (Copenhagen)."
+    },
+    {
+      "codigo": "DJI",
+      "pais": "Djibouti",
+      "capital": "Djibouti",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Assal",
+        "Lago Abbe",
+        "Golfo de Tadjoura"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "DMA",
+      "pais": "Dominica",
+      "capital": "Roseau",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Boiling Lake",
+        "Cascadas Trafalgar",
+        "Parque Nacional Morne Trois Pitons"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ECU",
+      "pais": "Ecuador",
+      "capital": "Quito",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00",
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Islas Galápagos",
+        "Centro histórico de Quito",
+        "Volcán Cotopaxi"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Quito)."
+    },
+    {
+      "codigo": "EGY",
+      "pais": "Egipto",
+      "capital": "Cairo",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Pirámides de Guiza",
+        "Templos de Luxor y Karnak",
+        "Abu Simbel"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SLV",
+      "pais": "El Salvador",
+      "capital": "San Salvador",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Ruta de las Flores",
+        "Joya de Cerén",
+        "Playa El Tunco"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ARE",
+      "pais": "Emiratos Árabes Unidos",
+      "capital": "Abu Dhabi",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Burj Khalifa (Dubái)",
+        "Gran Mezquita Sheikh Zayed (Abu Dabi)",
+        "Louvre Abu Dabi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ERI",
+      "pais": "Eritrea",
+      "capital": "Asmara",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Asmara (arquitectura modernista)",
+        "Puerto de Massawa",
+        "Archipiélago Dahlak"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SVN",
+      "pais": "Eslovenia",
+      "capital": "Ljubljana",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Bled",
+        "Cuevas de Postojna",
+        "Casco antiguo de Liubliana"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ESP",
+      "pais": "España",
+      "capital": "Madrid",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC",
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Sagrada Familia (Barcelona)",
+        "Alhambra (Granada)",
+        "Museo del Prado (Madrid)"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Madrid)."
+    },
+    {
+      "codigo": "USA",
+      "pais": "Estados Unidos",
+      "capital": "Washington, D.C.",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-12:00",
+        "UTC-11:00",
+        "UTC-10:00",
+        "UTC-09:00",
+        "UTC-08:00",
+        "UTC-07:00",
+        "UTC-06:00",
+        "UTC-05:00",
+        "UTC-04:00",
+        "UTC+10:00",
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Times Square y Central Park (Nueva York)",
+        "Gran Cañón",
+        "Walt Disney World (Orlando)"
+      ],
+      "nota": "Tiene 11 husos: se usa el de la capital (Washington, D.C.)."
+    },
+    {
+      "codigo": "EST",
+      "pais": "Estonia",
+      "capital": "Tallinn",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casco antiguo de Tallin",
+        "Parque Nacional Lahemaa",
+        "Isla de Saaremaa"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ETH",
+      "pais": "Etiopía",
+      "capital": "Addis Ababa",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Iglesias de Lalibela",
+        "Montes Simien",
+        "Castillos de Gondar"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PHL",
+      "pais": "Filipinas",
+      "capital": "Manila",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "El Nido (Palawan)",
+        "Isla de Boracay",
+        "Terrazas de arroz de Banaue"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "FIN",
+      "pais": "Finlandia",
+      "capital": "Helsinki",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fortaleza de Suomenlinna (Helsinki)",
+        "Rovaniemi (Laponia)",
+        "Catedral de Helsinki"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "FJI",
+      "pais": "Fiyi",
+      "capital": "Suva",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Islas Mamanuca",
+        "Islas Yasawa",
+        "Jardín del Gigante Durmiente"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "FRA",
+      "pais": "Francia",
+      "capital": "Paris",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC-10:00",
+        "UTC-09:30",
+        "UTC-09:00",
+        "UTC-08:00",
+        "UTC-04:00",
+        "UTC-03:00",
+        "UTC+01:00",
+        "UTC+02:00",
+        "UTC+03:00",
+        "UTC+04:00",
+        "UTC+05:00",
+        "UTC+10:00",
+        "UTC+11:00",
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torre Eiffel (París)",
+        "Museo del Louvre",
+        "Mont-Saint-Michel"
+      ],
+      "nota": "Tiene 14 husos: se usa el de la capital (Paris)."
+    },
+    {
+      "codigo": "GAB",
+      "pais": "Gabón",
+      "capital": "Libreville",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Loango",
+        "Parque Nacional Lopé",
+        "Parque Nacional Pongara"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GMB",
+      "pais": "Gambia",
+      "capital": "Banjul",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+00:00"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla Kunta Kinteh",
+        "Reserva natural de Abuko",
+        "Playa de Kololi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GEO",
+      "pais": "Georgia",
+      "capital": "Tbilisi",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casco antiguo de Tiflis",
+        "Iglesia de la Trinidad de Gergeti (Kazbegi)",
+        "Monasterio de Jvari (Mtsjeta)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GHA",
+      "pais": "Ghana",
+      "capital": "Accra",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Castillo de Cape Coast",
+        "Parque Nacional Kakum",
+        "Cascadas Wli"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GRC",
+      "pais": "Grecia",
+      "capital": "Athens",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Acrópolis de Atenas",
+        "Santorini",
+        "Meteora"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GRD",
+      "pais": "Grenada",
+      "capital": "St. George's",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Playa Grand Anse",
+        "Parque submarino de esculturas",
+        "St. George's"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GTM",
+      "pais": "Guatemala",
+      "capital": "Guatemala City",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Tikal",
+        "Antigua Guatemala",
+        "Lago de Atitlán"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GIN",
+      "pais": "Guinea",
+      "capital": "Conakry",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fouta Djallon",
+        "Islas de Los",
+        "Monte Nimba"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GNQ",
+      "pais": "Guinea Ecuatorial",
+      "capital": "Malabo",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla de Bioko (Malabo)",
+        "Parque Nacional Monte Alén",
+        "Playas de Bata"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GNB",
+      "pais": "Guinea-Bisáu",
+      "capital": "Bissau",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Archipiélago de Bijagós",
+        "Cacheu",
+        "Bissau Velho"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "GUY",
+      "pais": "Guyana",
+      "capital": "Georgetown",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas Kaieteur",
+        "Río Esequibo",
+        "Bosque de Iwokrama"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "HTI",
+      "pais": "Haití",
+      "capital": "Port-au-Prince",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Ciudadela Laferrière",
+        "Palacio Sans-Souci",
+        "Labadee"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "HND",
+      "pais": "Honduras",
+      "capital": "Tegucigalpa",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Ruinas de Copán",
+        "Roatán (Islas de la Bahía)",
+        "Lago de Yojoa"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "HUN",
+      "pais": "Hungría",
+      "capital": "Budapest",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parlamento de Budapest",
+        "Baños Széchenyi",
+        "Lago Balaton"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "IND",
+      "pais": "India",
+      "capital": "New Delhi",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:30"
+      ],
+      "husoUsadoUTC": 5.5,
+      "diferenciaColombiaHoras": 10.5,
+      "lectura": "10 h 30 min más que Colombia",
+      "lugaresImperdibles": [
+        "Taj Mahal (Agra)",
+        "Palacio de los Vientos (Jaipur)",
+        "Varanasi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "IDN",
+      "pais": "Indonesia",
+      "capital": "Jakarta",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00",
+        "UTC+08:00",
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 7,
+      "diferenciaColombiaHoras": 12,
+      "lectura": "12 h más que Colombia",
+      "lugaresImperdibles": [
+        "Bali",
+        "Templo de Borobudur",
+        "Parque Nacional de Komodo"
+      ],
+      "nota": "Tiene 3 husos: se usa el de la capital (Jakarta)."
+    },
+    {
+      "codigo": "IRQ",
+      "pais": "Irak",
+      "capital": "Baghdad",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Babilonia",
+        "Ciudadela de Erbil",
+        "Santuario del Imán Husein (Kerbala)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "IRN",
+      "pais": "Iran",
+      "capital": "Tehran",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:30"
+      ],
+      "husoUsadoUTC": 3.5,
+      "diferenciaColombiaHoras": 8.5,
+      "lectura": "8 h 30 min más que Colombia",
+      "lugaresImperdibles": [
+        "Plaza Naqsh-e Jahan (Isfahán)",
+        "Persépolis",
+        "Mezquita Nasir al-Mulk (Shiraz)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "IRL",
+      "pais": "Irlanda",
+      "capital": "Dublin",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Acantilados de Moher",
+        "Anillo de Kerry",
+        "Trinity College (Dublín)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ISL",
+      "pais": "Islandia",
+      "capital": "Reykjavik",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Laguna Azul",
+        "Círculo Dorado",
+        "Laguna glaciar Jökulsárlón"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MHL",
+      "pais": "Islas Marshall",
+      "capital": "Majuro",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Atolón de Majuro",
+        "Atolón Bikini",
+        "Atolón Arno"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SLB",
+      "pais": "Islas Salomón",
+      "capital": "Honiara",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+11:00"
+      ],
+      "husoUsadoUTC": 11,
+      "diferenciaColombiaHoras": 16,
+      "lectura": "16 h más que Colombia",
+      "lugaresImperdibles": [
+        "Laguna de Marovo",
+        "Guadalcanal (sitios de la Segunda Guerra Mundial)",
+        "Isla Gizo"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ISR",
+      "pais": "Israel",
+      "capital": "Jerusalem",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ciudad Vieja de Jerusalén",
+        "Mar Muerto",
+        "Masada"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ITA",
+      "pais": "Italia",
+      "capital": "Rome",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Coliseo (Roma)",
+        "Canales de Venecia",
+        "Florencia (Duomo y Uffizi)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "JAM",
+      "pais": "Jamaica",
+      "capital": "Kingston",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas del río Dunn",
+        "Seven Mile Beach (Negril)",
+        "Blue Mountains"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "JPN",
+      "pais": "Japón",
+      "capital": "Tokyo",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 9,
+      "diferenciaColombiaHoras": 14,
+      "lectura": "14 h más que Colombia",
+      "lugaresImperdibles": [
+        "Santuario Fushimi Inari (Kioto)",
+        "Monte Fuji",
+        "Tokio (Shibuya y Asakusa)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "JOR",
+      "pais": "Jordania",
+      "capital": "Amman",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Petra",
+        "Wadi Rum",
+        "Mar Muerto"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KAZ",
+      "pais": "Kazajistán",
+      "capital": "Astana",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00",
+        "UTC+06:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Kaindy",
+        "Cañón de Charyn",
+        "Torre Baiterek (Astaná)"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Astana)."
+    },
+    {
+      "codigo": "KEN",
+      "pais": "Kenia",
+      "capital": "Nairobi",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Reserva Nacional Masái Mara",
+        "Parque Nacional Amboseli",
+        "Playa Diani"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KGZ",
+      "pais": "Kirguizistán",
+      "capital": "Bishkek",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+06:00"
+      ],
+      "husoUsadoUTC": 6,
+      "diferenciaColombiaHoras": 11,
+      "lectura": "11 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Issyk-Kul",
+        "Lago Song-Kul",
+        "Torre Burana"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KIR",
+      "pais": "Kiribati",
+      "capital": "South Tarawa",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+12:00",
+        "UTC+13:00",
+        "UTC+14:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Atolón de Tarawa",
+        "Isla de Navidad (Kiritimati)",
+        "Islas Fénix"
+      ],
+      "nota": "Tiene 3 husos: se usa el de la capital (South Tarawa)."
+    },
+    {
+      "codigo": "UNK",
+      "pais": "Kosovo",
+      "capital": "Pristina",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monasterio de Visoki Dečani",
+        "Casco antiguo de Prizren",
+        "Cueva de Gadime"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KWT",
+      "pais": "Kuwait",
+      "capital": "Kuwait City",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torres de Kuwait",
+        "Gran Mezquita de Kuwait",
+        "Souq Al-Mubarakiya"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LAO",
+      "pais": "Laos",
+      "capital": "Vientiane",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00"
+      ],
+      "husoUsadoUTC": 7,
+      "diferenciaColombiaHoras": 12,
+      "lectura": "12 h más que Colombia",
+      "lugaresImperdibles": [
+        "Luang Prabang",
+        "Cascadas Kuang Si",
+        "Vang Vieng"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LSO",
+      "pais": "Lesotho",
+      "capital": "Maseru",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Paso de Sani",
+        "Cascadas Maletsunyane",
+        "Thaba Bosiu"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LVA",
+      "pais": "Letonia",
+      "capital": "Riga",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casco antiguo de Riga",
+        "Parque Nacional Gauja",
+        "Palacio de Rundāle"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LBN",
+      "pais": "Líbano",
+      "capital": "Beirut",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gruta de Jeita",
+        "Baalbek",
+        "Biblos"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LBR",
+      "pais": "Liberia",
+      "capital": "Monrovia",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Playas de Robertsport",
+        "Parque Nacional Sapo",
+        "Isla Providence"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LBY",
+      "pais": "Libia",
+      "capital": "Tripoli",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Leptis Magna",
+        "Sabratha",
+        "Ghadames"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LIE",
+      "pais": "Liechtenstein",
+      "capital": "Vaduz",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Castillo de Vaduz",
+        "Kunstmuseum Liechtenstein",
+        "Malbun"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LTU",
+      "pais": "Lituania",
+      "capital": "Vilnius",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casco antiguo de Vilna",
+        "Castillo de Trakai",
+        "Colina de las Cruces"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LUX",
+      "pais": "Luxemburgo",
+      "capital": "Luxembourg",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casamatas del Bock",
+        "Castillo de Vianden",
+        "Ciudad vieja de Luxemburgo"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MKD",
+      "pais": "Macedonia del Norte",
+      "capital": "Skopje",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Ohrid",
+        "Cañón de Matka",
+        "Puente de Piedra (Skopie)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MDG",
+      "pais": "Madagascar",
+      "capital": "Antananarivo",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Avenida de los Baobabs",
+        "Tsingy de Bemaraha",
+        "Nosy Be"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MYS",
+      "pais": "Malasia",
+      "capital": "Kuala Lumpur",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torres Petronas (Kuala Lumpur)",
+        "George Town (Penang)",
+        "Islas Langkawi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MWI",
+      "pais": "Malawi",
+      "capital": "Lilongwe",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Lago Malawi",
+        "Parque Nacional Liwonde",
+        "Meseta de Zomba"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MDV",
+      "pais": "Maldivas",
+      "capital": "Malé",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Atolón Ari",
+        "Malé",
+        "Atolón Baa"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MLI",
+      "pais": "Mali",
+      "capital": "Bamako",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gran Mezquita de Djenné",
+        "Tombuctú",
+        "País Dogón"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MLT",
+      "pais": "Malta",
+      "capital": "Valletta",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "La Valeta",
+        "Gruta Azul",
+        "Mdina"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MAR",
+      "pais": "Marruecos",
+      "capital": "Rabat",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Plaza Jemaa el-Fna (Marrakech)",
+        "Chefchaouen",
+        "Desierto de Merzouga"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MUS",
+      "pais": "Mauricio",
+      "capital": "Port Louis",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Le Morne Brabant",
+        "Chamarel (Tierra de los Siete Colores)",
+        "Grand Baie"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MRT",
+      "pais": "Mauritania",
+      "capital": "Nouakchott",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Chinguetti",
+        "Ouadane",
+        "Parque Nacional Banc d'Arguin"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MEX",
+      "pais": "México",
+      "capital": "Mexico City",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-08:00",
+        "UTC-07:00",
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Chichén Itzá",
+        "Teotihuacán",
+        "Cancún y Riviera Maya"
+      ],
+      "nota": "Tiene 3 husos: se usa el de la capital (Mexico City)."
+    },
+    {
+      "codigo": "FSM",
+      "pais": "Micronesia",
+      "capital": "Palikir",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+10:00",
+        "UTC+11:00"
+      ],
+      "husoUsadoUTC": 11,
+      "diferenciaColombiaHoras": 16,
+      "lectura": "16 h más que Colombia",
+      "lugaresImperdibles": [
+        "Nan Madol",
+        "Laguna de Chuuk (pecios)",
+        "Islas Yap"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Palikir)."
+    },
+    {
+      "codigo": "MDA",
+      "pais": "Moldavia",
+      "capital": "Chișinău",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Orheiul Vechi",
+        "Bodegas Mileștii Mici",
+        "Chisináu"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MCO",
+      "pais": "Mónaco",
+      "capital": "Monaco",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casino de Montecarlo",
+        "Museo Oceanográfico",
+        "Palacio del Príncipe"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MNG",
+      "pais": "Mongolia",
+      "capital": "Ulan Bator",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00",
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Desierto de Gobi",
+        "Lago Khövsgöl",
+        "Monasterio de Erdene Zuu"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Ulan Bator)."
+    },
+    {
+      "codigo": "MNE",
+      "pais": "Montenegro",
+      "capital": "Podgorica",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Bahía de Kotor",
+        "Budva",
+        "Parque Nacional Durmitor"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MOZ",
+      "pais": "Mozambique",
+      "capital": "Maputo",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Archipiélago de Bazaruto",
+        "Isla de Mozambique",
+        "Playa de Tofo"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "MMR",
+      "pais": "Myanmar",
+      "capital": "Naypyidaw",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+06:30"
+      ],
+      "husoUsadoUTC": 6.5,
+      "diferenciaColombiaHoras": 11.5,
+      "lectura": "11 h 30 min más que Colombia",
+      "lugaresImperdibles": [
+        "Templos de Bagan",
+        "Pagoda Shwedagon (Rangún)",
+        "Lago Inle"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NAM",
+      "pais": "Namibia",
+      "capital": "Windhoek",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Dunas de Sossusvlei",
+        "Parque Nacional Etosha",
+        "Costa de los Esqueletos"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NRU",
+      "pais": "Nauru",
+      "capital": "Yaren",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Playa de Anibare",
+        "Laguna Buada",
+        "Command Ridge"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NPL",
+      "pais": "Nepal",
+      "capital": "Kathmandu",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:45"
+      ],
+      "husoUsadoUTC": 5.75,
+      "diferenciaColombiaHoras": 10.75,
+      "lectura": "10 h 45 min más que Colombia",
+      "lugaresImperdibles": [
+        "Campamento base del Everest",
+        "Valle de Katmandú",
+        "Pokhara"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NIC",
+      "pais": "Nicaragua",
+      "capital": "Managua",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-06:00"
+      ],
+      "husoUsadoUTC": -6,
+      "diferenciaColombiaHoras": -1,
+      "lectura": "1 h menos que Colombia",
+      "lugaresImperdibles": [
+        "Granada",
+        "Isla de Ometepe",
+        "Volcán Masaya"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NER",
+      "pais": "Níger",
+      "capital": "Niamey",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gran Mezquita de Agadez",
+        "Montes Aïr",
+        "Parque Nacional W"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NGA",
+      "pais": "Nigeria",
+      "capital": "Abuja",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Roca Zuma",
+        "Bosque sagrado de Osun-Osogbo",
+        "Lekki Conservation Centre (Lagos)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NOR",
+      "pais": "Noruega",
+      "capital": "Oslo",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Geirangerfjord",
+        "Islas Lofoten",
+        "Preikestolen"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NZL",
+      "pais": "Nueva Zelanda",
+      "capital": "Wellington",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC-11:00",
+        "UTC-10:00",
+        "UTC+12:00",
+        "UTC+12:45",
+        "UTC+13:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Milford Sound",
+        "Hobbiton (Matamata)",
+        "Queenstown"
+      ],
+      "nota": "Tiene 5 husos: se usa el de la capital (Wellington)."
+    },
+    {
+      "codigo": "OMN",
+      "pais": "Omán",
+      "capital": "Muscat",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gran Mezquita del Sultán Qaboos (Mascate)",
+        "Wadi Shab",
+        "Fuerte de Nizwa"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "NLD",
+      "pais": "Países Bajos",
+      "capital": "Amsterdam",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Canales de Ámsterdam",
+        "Museo Van Gogh",
+        "Keukenhof"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PAK",
+      "pais": "Pakistán",
+      "capital": "Islamabad",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Valle de Hunza",
+        "Mezquita Badshahi (Lahore)",
+        "Mohenjo-Daro"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PLW",
+      "pais": "Palau",
+      "capital": "Ngerulmud",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 9,
+      "diferenciaColombiaHoras": 14,
+      "lectura": "14 h más que Colombia",
+      "lugaresImperdibles": [
+        "Islas Rocosas (Rock Islands)",
+        "Lago de las Medusas",
+        "Blue Corner"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PSE",
+      "pais": "Palestina",
+      "capital": "Ramallah, Jerusalem",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Iglesia de la Natividad (Belén)",
+        "Jericó",
+        "Casco antiguo de Hebrón"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PAN",
+      "pais": "Panamá",
+      "capital": "Panama City",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Canal de Panamá",
+        "San Blas (Guna Yala)",
+        "Casco Viejo de Panamá"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PNG",
+      "pais": "Papúa Nueva Guinea",
+      "capital": "Port Moresby",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+10:00"
+      ],
+      "husoUsadoUTC": 10,
+      "diferenciaColombiaHoras": 15,
+      "lectura": "15 h más que Colombia",
+      "lugaresImperdibles": [
+        "Camino de Kokoda",
+        "Río Sepik",
+        "Monte Hagen"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PRY",
+      "pais": "Paraguay",
+      "capital": "Asunción",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Misiones jesuíticas de Trinidad y Jesús",
+        "Represa de Itaipú",
+        "Centro histórico de Asunción"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PER",
+      "pais": "Perú",
+      "capital": "Lima",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-05:00"
+      ],
+      "husoUsadoUTC": -5,
+      "diferenciaColombiaHoras": 0,
+      "lectura": "Misma hora que Colombia",
+      "lugaresImperdibles": [
+        "Machu Picchu",
+        "Cusco",
+        "Líneas de Nazca"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "POL",
+      "pais": "Polonia",
+      "capital": "Warsaw",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Casco antiguo de Cracovia",
+        "Auschwitz-Birkenau",
+        "Mina de sal de Wieliczka"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "PRT",
+      "pais": "Portugal",
+      "capital": "Lisbon",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC-01:00",
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torre de Belém (Lisboa)",
+        "Ribeira de Oporto",
+        "Sintra"
+      ],
+      "nota": "Tiene 2 husos: se usa el de la capital (Lisbon)."
+    },
+    {
+      "codigo": "GBR",
+      "pais": "Reino Unido",
+      "capital": "London",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC-08:00",
+        "UTC-05:00",
+        "UTC-04:00",
+        "UTC-03:00",
+        "UTC-02:00",
+        "UTC",
+        "UTC+01:00",
+        "UTC+02:00",
+        "UTC+06:00"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torre de Londres y Big Ben",
+        "Stonehenge",
+        "Castillo de Edimburgo"
+      ],
+      "nota": "Tiene 9 husos: se usa el de la capital (London)."
+    },
+    {
+      "codigo": "CAF",
+      "pais": "República Centroafricana",
+      "capital": "Bangui",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Dzanga-Sangha",
+        "Cataratas de Boali",
+        "Parque Nacional Manovo-Gounda St. Floris"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "DOM",
+      "pais": "República Dominicana",
+      "capital": "Santo Domingo",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Punta Cana",
+        "Zona Colonial de Santo Domingo",
+        "Isla Saona"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SVK",
+      "pais": "República Eslovaca",
+      "capital": "Bratislava",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Castillo de Bratislava",
+        "Altos Tatras",
+        "Castillo de Spiš"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "RWA",
+      "pais": "Ruanda",
+      "capital": "Kigali",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional de los Volcanes",
+        "Lago Kivu",
+        "Memorial del Genocidio de Kigali"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ROU",
+      "pais": "Rumania",
+      "capital": "Bucharest",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Castillo de Bran",
+        "Sighișoara",
+        "Palacio del Parlamento (Bucarest)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "RUS",
+      "pais": "Rusia",
+      "capital": "Moscow",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+03:00",
+        "UTC+04:00",
+        "UTC+06:00",
+        "UTC+07:00",
+        "UTC+08:00",
+        "UTC+09:00",
+        "UTC+10:00",
+        "UTC+11:00",
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Plaza Roja y Kremlin (Moscú)",
+        "Museo del Hermitage (San Petersburgo)",
+        "Lago Baikal"
+      ],
+      "nota": "Tiene 9 husos: se usa el de la capital (Moscow)."
+    },
+    {
+      "codigo": "WSM",
+      "pais": "Samoa",
+      "capital": "Apia",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+13:00"
+      ],
+      "husoUsadoUTC": 13,
+      "diferenciaColombiaHoras": 18,
+      "lectura": "18 h más que Colombia",
+      "lugaresImperdibles": [
+        "Piscina To Sua",
+        "Playa Lalomanu",
+        "Cascadas Papapapaitai"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "KNA",
+      "pais": "San Cristóbal y Nieves",
+      "capital": "Basseterre",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fortaleza de Brimstone Hill",
+        "Isla Nevis",
+        "Ferrocarril panorámico de San Cristóbal"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SMR",
+      "pais": "San Marino",
+      "capital": "City of San Marino",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Torre Guaita",
+        "Palazzo Pubblico",
+        "Monte Titano"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "VCT",
+      "pais": "San Vicente y Granadinas",
+      "capital": "Kingstown",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Tobago Cays",
+        "Isla Bequia",
+        "Volcán La Soufrière"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LCA",
+      "pais": "Santa Lucía",
+      "capital": "Castries",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Los Pitons",
+        "Sulphur Springs",
+        "Bahía Marigot"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "STP",
+      "pais": "Santo Tomé y Príncipe",
+      "capital": "São Tomé",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Pico Cão Grande",
+        "Parque Natural Obô",
+        "Isla de Príncipe"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SEN",
+      "pais": "Senegal",
+      "capital": "Dakar",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla de Gorea",
+        "Lago Retba (Lago Rosa)",
+        "Isla de San Luis"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SRB",
+      "pais": "Serbia",
+      "capital": "Belgrade",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Fortaleza de Kalemegdan (Belgrado)",
+        "Fortaleza de Petrovaradin (Novi Sad)",
+        "Monasterio de Studenica"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SYC",
+      "pais": "Seychelles",
+      "capital": "Victoria",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+04:00"
+      ],
+      "husoUsadoUTC": 4,
+      "diferenciaColombiaHoras": 9,
+      "lectura": "9 h más que Colombia",
+      "lugaresImperdibles": [
+        "Anse Source d'Argent (La Digue)",
+        "Vallée de Mai (Praslin)",
+        "Isla Mahé"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SLE",
+      "pais": "Sierra Leone",
+      "capital": "Freetown",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla Bunce",
+        "Playas de la península de Freetown",
+        "Santuario de chimpancés Tacugama"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SGP",
+      "pais": "Singapur",
+      "capital": "Singapore",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Isla Sentosa"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SYR",
+      "pais": "Siria",
+      "capital": "Damascus",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ciudad vieja de Damasco",
+        "Palmira",
+        "Krak de los Caballeros"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SOM",
+      "pais": "Somalia",
+      "capital": "Mogadishu",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Playa Lido (Mogadiscio)",
+        "Pinturas rupestres de Laas Geel",
+        "Berbera"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "LKA",
+      "pais": "Sri Lanka",
+      "capital": "Sri Jayawardenepura Kotte",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:30"
+      ],
+      "husoUsadoUTC": 5.5,
+      "diferenciaColombiaHoras": 10.5,
+      "lectura": "10 h 30 min más que Colombia",
+      "lugaresImperdibles": [
+        "Roca de Sigiriya",
+        "Templo del Diente (Kandy)",
+        "Fuerte de Galle"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SWZ",
+      "pais": "Suazilandia",
+      "capital": "Mbabane, Lobamba",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Santuario Mlilwane",
+        "Parque Nacional Hlane",
+        "Valle de Ezulwini"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ZAF",
+      "pais": "Sudáfrica",
+      "capital": "Pretoria, Cape Town, Bloemfontein",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Montaña de la Mesa (Ciudad del Cabo)",
+        "Parque Nacional Kruger",
+        "Cabo de Buena Esperanza"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SDN",
+      "pais": "Sudán",
+      "capital": "Khartoum",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Pirámides de Meroe",
+        "Jebel Barkal",
+        "Confluencia del Nilo (Jartum)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SSD",
+      "pais": "Sudán del Sur",
+      "capital": "Juba",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Boma",
+        "Parque Nacional Nimule",
+        "Río Nilo Blanco (Yuba)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SWE",
+      "pais": "Suecia",
+      "capital": "Stockholm",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gamla Stan (Estocolmo)",
+        "Museo Vasa",
+        "Abisko (Laponia sueca)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "CHE",
+      "pais": "Suiza",
+      "capital": "Bern",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Matterhorn (Zermatt)",
+        "Lago de Ginebra",
+        "Jungfraujoch"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "SUR",
+      "pais": "Surinam",
+      "capital": "Paramaribo",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-03:00"
+      ],
+      "husoUsadoUTC": -3,
+      "diferenciaColombiaHoras": 2,
+      "lectura": "2 h más que Colombia",
+      "lugaresImperdibles": [
+        "Centro histórico de Paramaribo",
+        "Reserva Natural de Surinam Central",
+        "Parque Natural Brownsberg"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "THA",
+      "pais": "Tailandia",
+      "capital": "Bangkok",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00"
+      ],
+      "husoUsadoUTC": 7,
+      "diferenciaColombiaHoras": 12,
+      "lectura": "12 h más que Colombia",
+      "lugaresImperdibles": [
+        "Gran Palacio (Bangkok)",
+        "Phuket",
+        "Chiang Mai"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TWN",
+      "pais": "Taiwán",
+      "capital": "Taipei",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+08:00"
+      ],
+      "husoUsadoUTC": 8,
+      "diferenciaColombiaHoras": 13,
+      "lectura": "13 h más que Colombia",
+      "lugaresImperdibles": [
+        "Taipei 101",
+        "Garganta de Taroko",
+        "Lago del Sol y la Luna"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TZA",
+      "pais": "Tanzania",
+      "capital": "Dodoma",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Monte Kilimanjaro",
+        "Parque Nacional Serengueti",
+        "Stone Town (Zanzíbar)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TJK",
+      "pais": "Tayikistán",
+      "capital": "Dushanbe",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Montes Pamir",
+        "Lago Iskanderkul",
+        "Siete Lagos de Marguzor"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TLS",
+      "pais": "Timor Oriental",
+      "capital": "Dili",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+09:00"
+      ],
+      "husoUsadoUTC": 9,
+      "diferenciaColombiaHoras": 14,
+      "lectura": "14 h más que Colombia",
+      "lugaresImperdibles": [
+        "Isla de Atauro",
+        "Cristo Rei (Dili)",
+        "Monte Ramelau"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TGO",
+      "pais": "Togo",
+      "capital": "Lomé",
+      "region": "África",
+      "husosHorarios": [
+        "UTC"
+      ],
+      "husoUsadoUTC": 0,
+      "diferenciaColombiaHoras": 5,
+      "lectura": "5 h más que Colombia",
+      "lugaresImperdibles": [
+        "Koutammakou",
+        "Mercado de los Fetiches (Lomé)",
+        "Kpalimé"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TON",
+      "pais": "Tonga",
+      "capital": "Nuku'alofa",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+13:00"
+      ],
+      "husoUsadoUTC": 13,
+      "diferenciaColombiaHoras": 18,
+      "lectura": "18 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ballenas jorobadas en Vava'u",
+        "Ha'amonga 'a Maui",
+        "Cuevas Anahulu"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TTO",
+      "pais": "Trinidad y Tobago",
+      "capital": "Port of Spain",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Playa Maracas",
+        "Pigeon Point (Tobago)",
+        "Lago de Brea (Pitch Lake)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TUN",
+      "pais": "Túnez",
+      "capital": "Tunis",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+01:00"
+      ],
+      "husoUsadoUTC": 1,
+      "diferenciaColombiaHoras": 6,
+      "lectura": "6 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ruinas de Cartago",
+        "Sidi Bou Said",
+        "Anfiteatro de El Djem"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TKM",
+      "pais": "Turkmenistán",
+      "capital": "Ashgabat",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cráter de Darvaza",
+        "Merv antigua",
+        "Asjabad"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TUR",
+      "pais": "Turquía",
+      "capital": "Ankara",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Santa Sofía (Estambul)",
+        "Capadocia",
+        "Pamukkale"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "TUV",
+      "pais": "Tuvalu",
+      "capital": "Funafuti",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+12:00"
+      ],
+      "husoUsadoUTC": 12,
+      "diferenciaColombiaHoras": 17,
+      "lectura": "17 h más que Colombia",
+      "lugaresImperdibles": [
+        "Laguna de Funafuti",
+        "Área de conservación de Funafuti",
+        "Atolón de Nanumea"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "UKR",
+      "pais": "Ucrania",
+      "capital": "Kyiv",
+      "region": "Europa",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Catedral de Santa Sofía (Kiev)",
+        "Casco antiguo de Leópolis (Lviv)",
+        "Monasterio de las Cuevas de Kiev"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "UGA",
+      "pais": "Uganda",
+      "capital": "Kampala",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Parque Nacional Bwindi",
+        "Cataratas Murchison",
+        "Nacimiento del Nilo (Jinja)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "URY",
+      "pais": "Uruguay",
+      "capital": "Montevideo",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-03:00"
+      ],
+      "husoUsadoUTC": -3,
+      "diferenciaColombiaHoras": 2,
+      "lectura": "2 h más que Colombia",
+      "lugaresImperdibles": [
+        "Colonia del Sacramento",
+        "Punta del Este",
+        "Ciudad Vieja de Montevideo"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "UZB",
+      "pais": "Uzbekistán",
+      "capital": "Tashkent",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+05:00"
+      ],
+      "husoUsadoUTC": 5,
+      "diferenciaColombiaHoras": 10,
+      "lectura": "10 h más que Colombia",
+      "lugaresImperdibles": [
+        "Registán (Samarcanda)",
+        "Bujará",
+        "Jiva"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "VUT",
+      "pais": "Vanuatu",
+      "capital": "Port Vila",
+      "region": "Oceanía",
+      "husosHorarios": [
+        "UTC+11:00"
+      ],
+      "husoUsadoUTC": 11,
+      "diferenciaColombiaHoras": 16,
+      "lectura": "16 h más que Colombia",
+      "lugaresImperdibles": [
+        "Volcán Yasur (Tanna)",
+        "Playa Champagne (Espíritu Santo)",
+        "Cascadas Mele (Efate)"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "VEN",
+      "pais": "Venezuela",
+      "capital": "Caracas",
+      "region": "América",
+      "husosHorarios": [
+        "UTC-04:00"
+      ],
+      "husoUsadoUTC": -4,
+      "diferenciaColombiaHoras": 1,
+      "lectura": "1 h más que Colombia",
+      "lugaresImperdibles": [
+        "Salto Ángel",
+        "Archipiélago Los Roques",
+        "Monte Roraima"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "VNM",
+      "pais": "Vietnam",
+      "capital": "Hanoi",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+07:00"
+      ],
+      "husoUsadoUTC": 7,
+      "diferenciaColombiaHoras": 12,
+      "lectura": "12 h más que Colombia",
+      "lugaresImperdibles": [
+        "Bahía de Ha Long",
+        "Hoi An",
+        "Barrio antiguo de Hanói"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "YEM",
+      "pais": "Yemen",
+      "capital": "Sana'a",
+      "region": "Asia",
+      "husosHorarios": [
+        "UTC+03:00"
+      ],
+      "husoUsadoUTC": 3,
+      "diferenciaColombiaHoras": 8,
+      "lectura": "8 h más que Colombia",
+      "lugaresImperdibles": [
+        "Ciudad vieja de Saná",
+        "Shibam",
+        "Isla de Socotra"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ZMB",
+      "pais": "Zambia",
+      "capital": "Lusaka",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas Victoria",
+        "Parque Nacional South Luangwa",
+        "Parque Nacional Lower Zambezi"
+      ],
+      "nota": null
+    },
+    {
+      "codigo": "ZWE",
+      "pais": "Zimbabue",
+      "capital": "Harare",
+      "region": "África",
+      "husosHorarios": [
+        "UTC+02:00"
+      ],
+      "husoUsadoUTC": 2,
+      "diferenciaColombiaHoras": 7,
+      "lectura": "7 h más que Colombia",
+      "lugaresImperdibles": [
+        "Cataratas Victoria",
+        "Gran Zimbabue",
+        "Parque Nacional Hwange"
+      ],
+      "nota": null
+    }
+  ]
+}

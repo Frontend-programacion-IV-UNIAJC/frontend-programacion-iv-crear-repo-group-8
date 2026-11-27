@@ -1,35 +1,50 @@
 ---
-//Card.astro
-//Resumen de la receta la recibe por props no va a buscar datos
-import { Etiqueta } from "../ui/Etiqueta.astro";
-
-const {receta} = Astro.props;
-const { id, nombre, categoria, area, imagen,minutos, dficultad} = receta;
+// Card.astro
+// Resumen de un pais. Lo recibe por props: no va a buscar datos.
+import Etiqueta from "../ui/Etiqueta.astro";
+ 
+const { pais } = Astro.props;
+const { id, nombre, bandera, banderaAlt, capital, region, poblacion, idiomas } = pais;
 const base = import.meta.env.BASE_URL;
+// 53399171 -> "53.399.171" (formato colombiano). Es una estimacion de la API.
+const poblacionTexto = poblacion > 0 ? `${poblacion.toLocaleString("es-CO")} hab. aprox.` : null;
+// Si la API no trae bandera, imagen por defecto en vez de una imagen rota.
+const src = bandera?.startsWith("http") ? bandera : `${base}img/bandera-no-disponible.svg`;
 ---
-
+ 
 <article class="tarjeta">
     <div class="tarjeta__medio">
-        <!-- width y heigth reservan el espacio antes de que llegue la imagen -->
-         <img
-         class="tarjeta__imagen"
-         src={`${base}${imagen}`}
-         alt=""
-         width="400"
-         height="300"
-         loading="lazy"
-         />
-         <span class="tarjeta__tiempo">{minutos} min</span>
-         <button
-         class="tarjeta__favorito"
-         type="button"
-         aria-label={`Guardar ${nombre} en favoritos`}
-         aria-pressed="false"
-         >
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8.8a5.5 5.5 0 0 0 0-7.8Z" />
-        </svg>
+        <!-- width y height reservan el espacio antes de que llegue la imagen -->
+        <img
+            class="tarjeta__imagen"
+            src={src}
+            alt={banderaAlt}
+            width="400"
+            height="300"
+            loading="lazy"
+        />
+        <span class="tarjeta__region">{region}</span>
+        <button
+            class="tarjeta__favorito"
+            type="button"
+            aria-label={`Guardar ${nombre} en favoritos`}
+            aria-pressed="false"
+        >
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8Z" />
+            </svg>
         </button>
+    </div>
+ 
+    <div class="tarjeta__cuerpo">
+        <h3 class="tarjeta__titulo">
+            <a class="tarjeta__enlace" href={`${base}paises/${id}`}>{nombre}</a>
+        </h3>
+        <p class="tarjeta__meta">Capital: {capital}</p>
+        <div class="tarjeta__etiquetas">
+            {poblacionTexto && <Etiqueta>{poblacionTexto}</Etiqueta>}
+            <Etiqueta>{idiomas?.[0] ?? "Sin dato"}</Etiqueta>
+        </div>
     </div>
 </article>
  
@@ -61,18 +76,19 @@ const base = import.meta.env.BASE_URL;
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
+    object-fit: contain; /* la bandera se ve completa, sin recortes */
+    padding: var(--esp-5) var(--esp-4);
     background: var(--color-superficie);
   }
 
-  .tarjeta__tiempo {
+  .tarjeta__region {
     position: absolute;
     left: var(--esp-2);
     bottom: var(--esp-2);
     padding: 0.3rem 0.6rem;
     border-radius: var(--radio-pildora);
-    background: rgba(36, 27, 22, 0.78);
-    color: #ffffff;
+    background: rgba(25, 25, 25, 0.78);
+    color: #ffffff; 
     font-size: var(--texto-xs);
     font-weight: 700;
   }

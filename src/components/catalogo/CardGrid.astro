@@ -1,18 +1,16 @@
 ---
-//CardGrid.astro
-//Rejilla de tarjetas
-import { config } from "astro:schema";
-import CardAstroComponent, { Card } from "./Card.astro";
-
-const {recetas } = Astro.props;
-
+// CardGrid.astro
+// Rejilla de tarjetas de paises
+import Card from "./Card.astro";
+ 
+const { paises = [] } = Astro.props;
 ---
-
+ 
 <ul class="rejilla">
-    {recetas.map((receta) => (
-    <li>
-        <Card receta={receta}/>
-    </li>
+    {paises.map((pais: any) => (
+        <li>
+            <Card pais={pais} />
+        </li>
     ))}
 </ul>
 
@@ -24,7 +22,7 @@ const {recetas } = Astro.props;
         list-style: none;
         margin: 0;
         padding: 0;
-        
+
 
     }
 </style>
