@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <title>Destino Abierto</title>
+  <!-- Mismo pin de mapa del Header, blanco sobre el naranja de marca -->
+  <rect width="32" height="32" rx="7" fill="#e4572e"/>
+  <g transform="translate(4 4)" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5Z"/>
+    <circle cx="12" cy="10" r="2.6"/>
+  </g>
+</svg>

@@ -1,0 +1,7 @@
+schema: "classroom50/repo-config/v1"
+classroom: "frontend-programacion-iv"
+assignment: "crear-repo"
+owner:
+  username: "Godoy1008"
+  id: 276442311
+  accepted_at: "2026-09-19T01:39:58Z"

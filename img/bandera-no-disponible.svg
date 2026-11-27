@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <title>Bandera no disponible</title>
+  <!-- Se muestra cuando la API no trae la bandera de un pais -->
+  <rect width="400" height="300" fill="#e3e8f0"/>
+  <g fill="none" stroke="#8a909b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 230V70"/>
+    <path d="M150 80h110l-20 35 20 35H150"/>
+  </g>
+  <text x="200" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#666b73">Bandera no disponible</text>
+</svg>
