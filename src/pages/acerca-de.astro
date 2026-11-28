@@ -1,0 +1,201 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  titulo="Acerca de — Destino Abierto"
+  descripcion="Qué problema resuelve Destino Abierto, para quién se construyó y con qué decisiones de diseño."
+  activo="acerca"
+>
+  <div class="contenedor">
+    <div class="disposicion">
+      <article class="texto">
+        <p class="rotulo">Acerca de</p>
+        <h1>Por qué existe Destino Abierto</h1>
+
+        <h2>El problema</h2>
+        <p>
+          Comparar países obliga a copiar datos a mano. Al comparar Países Bajos
+          con Alemania para un intercambio, un huso horario copiado en la fila
+          equivocada terminó en un horario de clases mal armado.
+        </p>
+
+        <h2>Para quién es</h2>
+        <p>
+          Para Mariana Ríos, estudiante de intercambio, que necesita comparar países 
+          antes de elegir dónde vivir, estudiar y comenzar una nueva experiencia. 
+          Y para Julián Torres, asesor de movilidad académica, que orienta a estudiantes 
+          y necesita consultar información de distintos destinos de forma rápida, 
+          clara y organizada, sin tener que abrir varias páginas para comparar.
+        </p>
+        <p>
+          De esas dos personas salieron dos decisiones que atraviesan todo el
+          producto: comparar 2 países en una sola pantalla, sin saltar entre páginas, y un cuerpo de
+          texto que nunca baja de 16 píxeles.
+        </p>
+
+        <h2>Decisiones de diseño</h2>
+        <ul class="lista">
+          <li>
+            Cada tarjeta lleva a una página 
+            con todos los datos del país.
+          </li>
+          <li>
+            El botón de volver es explícito y está arriba. No se confía en el
+            gesto del navegador.
+          </li>
+          <li>
+            Cada pantalla con datos está diseñada en sus cuatro estados: cargando,
+            con datos, vacía y con error.
+          </li>
+          <li>
+            Las filas donde los países son distintos se
+            marcan con ≠ y texto, no solo con color.
+          </li>
+          <li>
+            Un dato que no existe dice «Dato no disponible», y lo que es una
+            estimación (la población y la diferencia horaria) dice «aprox.».
+          </li>
+        </ul>
+
+        <h2>Créditos</h2>
+        <p>
+          Los datos de los países provienen de
+          <a href="https://restcountries.com" rel="noopener">REST Countries (versión 5)</a>, una
+          API pública. Usar datos de terceros sin darles crédito es
+          una falta, no un olvido.
+        </p>
+        <p>
+          La diferencia horaria con Colombia y los lugares imperdibles no vienen
+          de la API: los preparamos nosotros. Los lugares son sugerencias.
+        </p>
+      </article>
+
+      <aside class="ficha">
+        <h2 class="ficha__titulo">Ficha técnica</h2>
+        <dl class="ficha__lista">
+          <div>
+            <dt>Generador</dt>
+            <dd>Astro, sitio estático</dd>
+          </div>
+          <div>
+            <dt>Estilos</dt>
+            <dd>CSS propio, con variables y alcance por componente</dd>
+          </div>
+          <div>
+            <dt>Datos</dt>
+            <dd>REST Countries (versión 5)</dd>
+          </div>
+          <div>
+            <dt>Publicación</dt>
+            <dd>GitHub Pages desde la rama gh-pages</dd>
+          </div>
+          <div>
+            <dt>JavaScript enviado</dt>
+            <dd>Solo en la comparación</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .disposicion {
+    display: grid;
+    gap: var(--esp-5);
+  }
+
+  @media (min-width: 900px) {
+    .disposicion {
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: var(--esp-6);
+      align-items: start;
+    }
+  }
+
+  .texto {
+    max-width: var(--ancho-lectura);
+  }
+
+  .texto h2 {
+    margin-top: var(--esp-5);
+  }
+
+  .texto p {
+    color: var(--color-texto-suave);
+  }
+
+  .lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+    color: var(--color-texto-suave);
+  }
+
+  .lista li {
+    display: flex;
+    gap: var(--esp-2);
+    align-items: baseline;
+  }
+
+  .lista li::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: var(--radio-pildora);
+    background: var(--color-marca);
+    flex-shrink: 0;
+  }
+
+  /* ---- Ficha tecnica ---- */
+
+  .ficha {
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-m);
+    padding: var(--esp-4);
+  }
+
+  @media (min-width: 900px) {
+    .ficha {
+      position: sticky;
+      top: 7.5rem;
+    }
+  }
+
+  .ficha__titulo {
+    font-size: var(--texto-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: var(--fuente-texto);
+    font-weight: 700;
+    color: var(--color-texto-tenue);
+    margin: 0 0 var(--esp-3);
+  }
+
+  .ficha__lista {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+  }
+
+  .ficha__lista dt {
+    font-size: var(--texto-xs);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-texto-tenue);
+    margin-bottom: 2px;
+  }
+
+  .ficha__lista dd {
+    margin: 0;
+    font-size: var(--texto-s);
+    font-weight: 600;
+    color: var(--color-texto);
+  }
+</style>

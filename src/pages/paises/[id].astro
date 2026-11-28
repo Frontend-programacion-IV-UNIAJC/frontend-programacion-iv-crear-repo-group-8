@@ -1,0 +1,252 @@
+---
+// paises/[id].astro
+// UNA plantilla que genera UNA pagina por pais: /paises/COL, /paises/JPN...
+import Layout from "../../layouts/Layout.astro";
+import Etiqueta from "../../components/ui/Etiqueta.astro";
+import Boton from "../../components/ui/Boton.astro";
+import { obtenerPaises } from "../../services/api.js";
+import { FILAS, SIN_DATO, valores } from "../../lib/comparacion.js";
+import { conExtras } from "../../lib/extras.js";
+
+// getStaticPaths le dice a Astro QUE paginas construir. Se ejecuta en el build.
+// params -> la direccion de cada pagina. props -> los datos que recibe.
+export async function getStaticPaths() {
+  const paises = await obtenerPaises();
+  return paises.map((pais) => ({
+    params: { id: pais.id },
+    props: { pais },
+  }));
+}
+
+// Pais de la API + diferencia horaria y lugares (del JSON del proyecto)
+const pais = conExtras(Astro.props.pais);
+const { id, nombre, bandera, banderaAlt, region, subregion } = pais;
+// Si a un pais le falta algun dato se usa una lista vacia, nunca undefined.
+const idiomas = pais.idiomas ?? [];
+const husos = pais.husos ?? [];
+const poblacion = valores(pais, "poblacion")[0];
+
+const base = import.meta.env.BASE_URL;
+// Si la API no trae bandera, se muestra una imagen por defecto (no una rota).
+const src = bandera?.startsWith("http") ? bandera : `${base}img/bandera-no-disponible.svg`;
+// Para el boton "Comparar": Francia, o Japon si este pais ES Francia.
+const otro = id === "FRA" ? "JPN" : "FRA";
+---
+
+<Layout
+  titulo={`${nombre} — Destino Abierto`}
+  descripcion={`${nombre}: capital, región, población, idiomas, moneda y husos horarios.`}
+  activo="catalogo"
+>
+  <div class="contenedor pais">
+    <a class="pais__volver" href={`${base}catalogo`}>
+      <span aria-hidden="true">‹</span> Volver al catálogo
+    </a>
+
+    <section class="pais__cabecera">
+      <img class="pais__bandera" src={src} alt={banderaAlt ?? `Bandera de ${nombre}`} width="640" height="480" />
+
+      <div class="pais__info">
+        <p class="rotulo">{region || SIN_DATO}</p>
+        <h1>{nombre}</h1>
+        <div class="pais__etiquetas">
+          {poblacion && <Etiqueta tono="marca">{poblacion}</Etiqueta>}
+          {idiomas.length > 0 && (
+            <Etiqueta>{idiomas.length} {idiomas.length === 1 ? "idioma" : "idiomas"}</Etiqueta>
+          )}
+          {husos.length > 0 && (
+            <Etiqueta>{husos.length} {husos.length === 1 ? "huso horario" : "husos horarios"}</Etiqueta>
+          )}
+          {subregion && <Etiqueta>{subregion}</Etiqueta>}
+        </div>
+        <div class="pais__acciones">
+          <Boton href={`${base}detalle?a=${id}&b=${otro}`}>Comparar con otro país</Boton>
+        </div>
+      </div>
+    </section>
+
+    <!-- Los mismos datos y en el mismo orden que la comparacion -->
+    <section class="pais__datos" aria-labelledby="titulo-datos">
+      <h2 id="titulo-datos">Datos de {nombre}</h2>
+      <dl class="ficha">
+        {FILAS.map(({ campo, etiqueta }) => {
+          const lista = valores(pais, campo);
+          return (
+            <div class="ficha__fila">
+              <dt>{etiqueta}</dt>
+              <dd>
+                {lista.length === 0 ? (
+                  <span class="sin-dato">{SIN_DATO}</span>
+                ) : lista.length === 1 ? (
+                  lista[0]
+                ) : (
+                  <>
+                    <ul class="chips">
+                      {lista.map((v) => <li class="chip">{v}</li>)}
+                    </ul>
+                    <span class="conteo">{lista.length} valores</span>
+                  </>
+                )}
+              </dd>
+            </div>
+          );
+        })}
+      </dl>
+      <p class="pais__fuente">
+        Datos según REST Countries. La población es una estimación. La diferencia
+        horaria no tiene en cuenta el horario de verano, y los lugares imperdibles
+        son sugerencias nuestras: no vienen de la API.
+      </p>
+    </section>
+  </div>
+</Layout>
+
+<style>
+  .pais {
+    display: grid;
+    gap: var(--esp-5);
+    padding-block: var(--esp-5);
+  }
+
+  .pais__volver {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-2);
+    min-height: 44px;
+    padding: 0 var(--esp-3);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pildora);
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  /* Celular: bandera arriba y datos debajo. Escritorio: dos columnas. */
+  .pais__cabecera {
+    display: grid;
+    gap: var(--esp-4);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .pais__cabecera {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--esp-6);
+    }
+  }
+
+  /* contain: la bandera se ve completa, no recortada */
+  .pais__bandera {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    padding: var(--esp-4);
+    border-radius: var(--radio-l);
+    box-shadow: var(--sombra-2);
+    background: var(--color-superficie);
+  }
+
+  /* sin min-width: 0, un nombre largo empuja la columna a 320 px */
+  .pais__info {
+    min-width: 0;
+  }
+
+  .pais__info h1 {
+    margin: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .pais__etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-2);
+    margin-top: var(--esp-4);
+  }
+
+  .pais__acciones {
+    margin-top: var(--esp-5);
+  }
+
+  .pais__datos h2 {
+    margin-bottom: var(--esp-3);
+  }
+
+  /* Ficha: dato a la izquierda, valor a la derecha, una fila por dato */
+  .ficha {
+    margin: 0;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-m);
+    overflow: hidden;
+  }
+
+  .ficha__fila {
+    display: grid;
+    grid-template-columns: minmax(7rem, 30%) 1fr;
+    gap: var(--esp-3);
+    padding: var(--esp-3);
+    border-top: 1px solid var(--color-borde);
+  }
+
+  .ficha__fila:first-child {
+    border-top: 0;
+  }
+
+  .ficha__fila:nth-child(even) {
+    background: var(--color-lienzo);
+  }
+
+  .ficha dt {
+    font-weight: 700;
+  }
+
+  .ficha dd {
+    margin: 0;
+    min-width: 0;
+  }
+
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .chip {
+    padding: 0.2rem 0.6rem;
+    font-size: var(--texto-s);
+    line-height: 1.4;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: var(--radio-pildora);
+    white-space: nowrap;
+  }
+
+  .conteo {
+    display: block;
+    margin-top: var(--esp-1);
+    font-size: var(--texto-xs);
+    color: var(--color-texto-suave);
+  }
+
+  .sin-dato {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    font-style: italic;
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+    border: 1px dashed var(--color-borde-fuerte);
+    border-radius: var(--radio-s);
+  }
+
+  .pais__fuente {
+    margin: var(--esp-2) 0 0;
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+  }
+</style>
