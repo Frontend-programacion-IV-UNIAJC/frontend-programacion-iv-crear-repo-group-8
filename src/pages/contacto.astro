@@ -1,29 +1,33 @@
 ---
 import Layout from "../layouts/Layout.astro";
 ---
-<Layout 
-titulo="Contacto — SaborU" descripcion="Catalogo de recetas rapidas con tiempo y dificultad visibles." 
-activo="contacto"
-> 
-    <section class="contenedor"> 
-        <p class="rotulo">contacto</p> 
-        <h1>Que puedes cocinar hoy</h1> 
-        <p class="entrada">Filtra por categoria o por dificultad.</p> 
-        <div class="pendiente">Se construye en la clase 5.</div> 
-    </section>
+
+<Layout
+  titulo="Contacto — Destino Abierto"
+  descripcion="Sugiere un destino o avísanos si ves un dato incorrecto."
+  activo="contacto"
+>
+  <section class="contenedor">
+    <p class="rotulo">Contacto</p>
+    <h1>Escríbenos</h1>
+    <p class="entrada">¿Falta un dato o encontraste un error en algún país? Leemos todos los mensajes.</p>
+
+    <div class="pendiente">Se construye más adelante, cuando agreguemos JavaScript.</div>
+  </section>
 </Layout>
 
-<style> 
-.entrada { max-width: var(--ancho-lectura); 
-    color: var(--color-texto-suave); 
-} 
-.pendiente { 
-    margin-top: var(--esp-5); 
-    padding: var(--esp-6) var(--esp-4); 
-    border: 2px dashed var(--color-borde-fuerte); 
-    border-radius: var(--radio-m); 
-    color: var(--color-texto-tenue); 
-    text-align: center; 
-}
+<style>
+  .entrada {
+    max-width: var(--ancho-lectura);
+    color: var(--color-texto-suave);
+  }
 
+  .pendiente {
+    margin-top: var(--esp-5);
+    padding: var(--esp-6) var(--esp-4);
+    border: 2px dashed var(--color-borde-fuerte);
+    border-radius: var(--radio-m);
+    color: var(--color-texto-tenue);
+    text-align: center;
+  }
 </style>

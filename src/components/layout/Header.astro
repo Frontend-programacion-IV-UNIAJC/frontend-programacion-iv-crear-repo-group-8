@@ -7,7 +7,7 @@ const {activo} = Astro.props;
 
 const enlaces = [
     {nombre: "Inicio", ruta:"", clave:"inicio"},
-    {nombre: "Catalogo", ruta:"catalogo", clave:"catalogo"},
+    {nombre: "Catálogo", ruta:"catalogo", clave:"catalogo"},
     {nombre: "Favoritos", ruta:"favoritos", clave:"favoritos"},
     {nombre: "Contacto", ruta:"contacto", clave:"contacto"},
     {nombre: "Acerca de", ruta:"acerca-de", clave:"acerca"},
@@ -19,17 +19,20 @@ const enlaces = [
     <div class="contenedor encabezado__interior">
     <a class="marca" href={base}>
         <span class="marca__simbolo" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 13h16"/>
-                <path d="M6 13a6 6 0 0 12 0"/>
-                <path d="M9 7.5C9 6 10.3 5 12 5s5 1 3 2.5"/>
-                <path d="M5 19h14"/>
-                
+            <!-- Pin de mapa: un destino marcado -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 21.5s-7-6.2-7-11.5a7 7 0 0 1 14 0c0 5.3-7 11.5-7 11.5Z"/>
+                <circle cx="12" cy="10" r="2.6"/>
             </svg>
         </span>
+        <span class="marca__texto">
+              <span class="marca__nombre">Destino Abierto</span>
+              <span class="marca__lema">Dos destinos, una gran elección.</span>
+          </span>
+
     </a>
 
-    <nav class="navegacion" aria-label="Navegacion principal">
+    <nav class="navegacion" aria-label="Navegación principal">
         <ul class="navegacion__lista">
             {enlaces.map((e) =>(
                 <li>

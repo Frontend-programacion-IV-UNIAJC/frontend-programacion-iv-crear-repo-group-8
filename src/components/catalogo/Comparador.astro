@@ -1,0 +1,75 @@
+---
+// Comparador.astro
+// Formulario para elegir los dos paises a comparar.
+// Funciona SIN JavaScript: al enviarlo, el navegador abre
+// detalle?a=FRA&b=JPN (los "name" de los <select> son "a" y "b").
+import Boton from "../ui/Boton.astro";
+ 
+const { paises, a = "FRA", b = "JPN" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+ 
+<form class="comparador" action={`${base}detalle`} method="get">
+  <p class="comparador__titulo">Comparar destinos</p>
+ 
+  <label class="comparador__campo">
+    <span>País 1</span>
+    <select name="a">
+      {paises.map((p: any) => (
+        <option value={p.id} selected={p.id === a}>{p.nombre}</option>
+      ))}
+    </select>
+  </label>
+ 
+  <label class="comparador__campo">
+    <span>País 2</span>
+    <select name="b">
+      {paises.map((p: any) => (
+        <option value={p.id} selected={p.id === b}>{p.nombre}</option>
+      ))}
+    </select>
+  </label>
+ 
+  <Boton tipo="submit">Empezar comparación</Boton>
+</form>
+ 
+<style>
+  .comparador {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-3);
+    padding: var(--esp-4);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-m);
+  }
+ 
+  .comparador__titulo {
+    margin: 0;
+    font-size: var(--texto-xs);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--color-texto-tenue);
+  }
+ 
+  .comparador__campo {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+    font-size: var(--texto-s);
+    font-weight: 600;
+    color: var(--color-texto);
+  }
+ 
+  .comparador__campo select {
+    min-height: 44px; /* tamano que un dedo acierta */
+    padding: 0 var(--esp-3);
+    font: inherit;
+    font-weight: 400;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: var(--radio-s);
+  }
+</style>

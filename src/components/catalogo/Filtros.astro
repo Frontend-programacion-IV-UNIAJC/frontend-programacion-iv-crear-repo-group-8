@@ -1,29 +1,42 @@
 ---
-//Filtros.Astro
-//una fila desplazable en el celular; una barra lateral en el escritorio
-//Hoy solo se ven. Empiezan a filtrar cuando agregemos javascript
-const { categorias = [], dificultades =[] }= Astro.props
-
+// Filtros.astro
+// Una fila desplazable en el celular; una barra lateral en el escritorio.
+// Region: botones (son pocas). Idioma y moneda: listas desplegables.
+// Hoy solo se ven. Empiezan a filtrar cuando agreguemos JavaScript.
+interface Props {
+    regiones?: string[];
+    idiomas?: string[];
+    monedas?: string[];
+}
+ 
+const { regiones = [], idiomas = [], monedas = [] } = Astro.props;
 ---
-
-<aside class="filtros" aria-label="Filtros del catalogo">
+ 
+<aside class="filtros" aria-label="Filtros del catálogo">
     <div class="filtros__grupo">
-        <p class="filtros__titulo">Categoria</p>
+        <p class="filtros__titulo">Región</p>
         <ul class="filtros__lista">
             <li><button class="filtro" type="button" aria-pressed="true">Todas</button></li>
-            {categorias.map((c) =>(
-                <li><button class="filtro" type="button" aria-pressed="false">{c}</button></li>
+            {regiones.map((r) => (
+                <li><button class="filtro" type="button" aria-pressed="false">{r}</button></li>
             ))}
         </ul>
     </div>
-
+    <!-- Idioma y moneda traen mas de 100 opciones cada uno: como botones
+         llenarian la pantalla, por eso van en una lista desplegable. -->
     <div class="filtros__grupo">
-        <p class="filtros__titulo">Dificultad</p>
-        <ul class="filtros__lista">
-            {dificultades.map((d) => ( 
-                <li><button class="filtro" type="button" aria-pressed="false">{d}</button></li>
-            ))}
-        </ul>
+        <label class="filtros__titulo" for="filtro-idioma">Idioma</label>
+        <select class="filtros__select" id="filtro-idioma" name="idioma">
+            <option value="" selected>Todos los idiomas</option>
+            {idiomas.map((i) => <option value={i}>{i}</option>)}
+        </select>
+    </div>
+    <div class="filtros__grupo">
+        <label class="filtros__titulo" for="filtro-moneda">Moneda</label>
+        <select class="filtros__select" id="filtro-moneda" name="moneda">
+            <option value="" selected>Todas las monedas</option>
+            {monedas.map((m) => <option value={m}>{m}</option>)}
+        </select>
     </div>
 </aside>
 
@@ -36,6 +49,7 @@ const { categorias = [], dificultades =[] }= Astro.props
   }
 
   .filtros__titulo {
+    display: block;
     margin: 0 0 var(--esp-2);
     font-size: var(--texto-xs);
     letter-spacing: 0.1em;
@@ -77,6 +91,25 @@ const { categorias = [], dificultades =[] }= Astro.props
     background: var(--color-marca);
     border-color: var(--color-marca);
     color: #ffffff;
+  }
+
+  .filtros__select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 44px;
+    padding: 0 var(--esp-3);
+    font: inherit;
+    font-size: var(--texto-s);
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: var(--radio-s);
+    cursor: pointer;
+  }
+
+  .filtros__select:hover,
+  .filtros__select:focus-visible {
+    border-color: var(--color-marca);
   }
 
   /* Escritorio: tarjeta lateral y botones uno debajo del otro */

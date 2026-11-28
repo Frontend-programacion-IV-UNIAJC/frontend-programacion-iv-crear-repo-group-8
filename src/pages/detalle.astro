@@ -1,29 +1,368 @@
 ---
+// detalle.astro
+// Comparacion "lado a lado" de dos paises.
+// 1. Al construir: trae los paises de la API y dibuja Francia vs Japon.
+// 2. En el navegador: lee ?a=...&b=... de la direccion y cambia los datos.
+// Las reglas (filas, dato no disponible, diferencias) viven en
+// src/lib/comparacion.js y las comparten el servidor y el navegador.
 import Layout from "../layouts/Layout.astro";
+import Comparador from "../components/catalogo/Comparador.astro";
+import { obtenerPaises } from "../services/api.js";
+import { FILAS, SIN_DATO, valores, sonDistintos } from "../lib/comparacion.js";
+import { conExtras } from "../lib/extras.js";
+
+const base = import.meta.env.BASE_URL;
+// Paises de la API + diferencia horaria y lugares. Asi el <script> del
+// navegador los recibe ya unidos y no necesita el JSON completo.
+const paises = (await obtenerPaises()).map(conExtras);
+const paisA = paises.find((p) => p.id === "FRA") ?? paises[0];
+const paisB = paises.find((p) => p.id === "JPN") ?? paises[1];
+const lados = [
+  ["a", paisA],
+  ["b", paisB],
+];
+// Imagen por defecto si la API no trae la bandera de un pais
+const banderaPorDefecto = `${base}img/bandera-no-disponible.svg`;
+const srcBandera = (pais: any) =>
+  pais.bandera?.startsWith("http") ? pais.bandera : banderaPorDefecto;
 ---
-<Layout 
-titulo="Detalle — SaborU" descripcion="Catalogo de recetas rapidas con tiempo y dificultad visibles." 
-activo="detalle"
-> 
-    <section class="contenedor"> 
-        <p class="rotulo">detalle</p> 
-        <h1>Que puedes cocinar hoy</h1> 
-        <p class="entrada">Filtra por categoria o por dificultad.</p> 
-        <div class="pendiente">Se construye en la clase 5.</div> 
-    </section>
+
+<Layout
+  titulo="Comparación — Destino Abierto"
+  descripcion="Compara dos países lado a lado: capital, región, población, idiomas, moneda y husos horarios."
+  activo="catalogo"
+>
+  <div class="contenedor">
+    <a class="volver" href={`${base}catalogo`}>← Volver al catálogo</a>
+
+    <h1>
+      <span data-lado="a" data-campo="nombre">{paisA.nombre}</span>{" vs "}<span data-lado="b" data-campo="nombre">{paisB.nombre}</span>
+    </h1>
+
+    <div class="detalle">
+      <Comparador paises={paises} a={paisA.id} b={paisB.id} />
+
+      <div>
+        <div class="tabla-envoltura" role="region" aria-label="Tabla de comparación" tabindex="0">
+          <table class="comparacion">
+            <caption>
+              Datos de <span data-lado="a" data-campo="nombre">{paisA.nombre}</span>{" y "}<span data-lado="b" data-campo="nombre">{paisB.nombre}</span> según REST Countries
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Dato</th>
+                {lados.map(([lado, pais]: any) => (
+                  <th scope="col">
+                    <img
+                      class="comparacion__bandera"
+                      data-lado={lado}
+                      src={srcBandera(pais)}
+                      data-por-defecto={banderaPorDefecto}
+                      alt={pais.banderaAlt}
+                      width="48"
+                      height="32"
+                    />
+                    <span data-lado={lado} data-campo="nombre">{pais.nombre}</span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {FILAS.map(({ campo, etiqueta }) => {
+                const distinto = sonDistintos(paisA, paisB, campo);
+                return (
+                  <tr class:list={["fila", { "fila--distinta": distinto }]} data-fila={campo}>
+                    <th scope="row">
+                      {etiqueta}
+                      <span class="fila__aviso" hidden={!distinto}>
+                        <span aria-hidden="true">≠</span> Distinto
+                      </span>
+                    </th>
+                    {lados.map(([lado, pais]: any) => {
+                      const lista = valores(pais, campo);
+                      return (
+                        <td data-lado={lado} data-celda={campo}>
+                          {lista.length === 0 ? (
+                            <span class="sin-dato">{SIN_DATO}</span>
+                          ) : lista.length === 1 ? (
+                            lista[0]
+                          ) : (
+                            <>
+                              <ul class="chips">
+                                {lista.map((v) => <li class="chip">{v}</li>)}
+                              </ul>
+                              <span class="conteo">{lista.length} valores</span>
+                            </>
+                          )}
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p class="leyenda">
+          <span class="fila__aviso"><span aria-hidden="true">≠</span> Distinto</span>
+          marca las filas donde los dos países no coinciden.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Todos los paises, ya adaptados, para que el navegador pueda cambiar
+       la comparacion sin volver a llamar a la API (ni exponer la clave). -->
+  <script id="datos-paises" type="application/json" set:html={JSON.stringify(paises)}></script>
 </Layout>
 
-<style> 
-.entrada { max-width: var(--ancho-lectura); 
-    color: var(--color-texto-suave); 
-} 
-.pendiente { 
-    margin-top: var(--esp-5); 
-    padding: var(--esp-6) var(--esp-4); 
-    border: 2px dashed var(--color-borde-fuerte); 
-    border-radius: var(--radio-m); 
-    color: var(--color-texto-tenue); 
-    text-align: center; 
-}
+<script>
+  import { FILAS, SIN_DATO, valores, sonDistintos } from "../lib/comparacion.js";
 
+  const nodo = document.getElementById("datos-paises");
+  const paises = JSON.parse(nodo?.textContent ?? "[]");
+  const parametros = new URLSearchParams(location.search);
+
+  // Pais que se muestra en cada lado: el de la URL o el que ya vino dibujado.
+  const actual: Record<string, any> = {
+    a: paises.find((p: any) => p.id === "FRA") ?? paises[0],
+    b: paises.find((p: any) => p.id === "JPN") ?? paises[1],
+  };
+
+  // Misma estructura que dibuja el servidor: texto, lista de chips o "sin dato".
+  function pintarCelda(celda: HTMLElement, lista: string[]) {
+    celda.replaceChildren();
+    if (lista.length === 0) {
+      const vacio = document.createElement("span");
+      vacio.className = "sin-dato";
+      vacio.textContent = SIN_DATO;
+      celda.append(vacio);
+    } else if (lista.length === 1) {
+      celda.textContent = lista[0];
+    } else {
+      const ul = document.createElement("ul");
+      ul.className = "chips";
+      for (const v of lista) {
+        const li = document.createElement("li");
+        li.className = "chip";
+        li.textContent = v;
+        ul.append(li);
+      }
+      const conteo = document.createElement("span");
+      conteo.className = "conteo";
+      conteo.textContent = `${lista.length} valores`;
+      celda.append(ul, conteo);
+    }
+  }
+
+  let cambio = false;
+  for (const lado of ["a", "b"]) {
+    const pais = paises.find((p: any) => p.id === parametros.get(lado));
+    if (!pais) continue; // sin parametro o codigo invalido: queda el de por defecto
+    actual[lado] = pais;
+    cambio = true;
+
+    document
+      .querySelectorAll<HTMLElement>(`[data-lado="${lado}"][data-campo="nombre"]`)
+      .forEach((el) => (el.textContent = pais.nombre));
+
+    document
+      .querySelectorAll<HTMLImageElement>(`img[data-lado="${lado}"]`)
+      .forEach((img) => {
+        img.src = pais.bandera?.startsWith("http") ? pais.bandera : img.dataset.porDefecto!;
+        img.alt = pais.banderaAlt;
+      });
+
+    document
+      .querySelectorAll<HTMLElement>(`td[data-lado="${lado}"][data-celda]`)
+      .forEach((td) => pintarCelda(td, valores(pais, td.dataset.celda!)));
+
+    const lista = document.querySelector<HTMLSelectElement>(`select[name="${lado}"]`);
+    if (lista) lista.value = pais.id;
+  }
+
+  if (cambio) {
+    // Recalcula que filas son distintas con los paises nuevos
+    for (const { campo } of FILAS) {
+      const fila = document.querySelector<HTMLElement>(`tr[data-fila="${campo}"]`);
+      if (!fila) continue;
+      const distinto = sonDistintos(actual.a, actual.b, campo);
+      fila.classList.toggle("fila--distinta", distinto);
+      const aviso = fila.querySelector<HTMLElement>(".fila__aviso");
+      if (aviso) aviso.hidden = !distinto;
+    }
+    document.title = `${actual.a.nombre} vs ${actual.b.nombre} — Destino Abierto`;
+  }
+</script>
+
+<style>
+  .volver {
+    display: inline-block;
+    margin-bottom: var(--esp-3);
+    font-size: var(--texto-s);
+    font-weight: 600;
+  }
+
+  /* Celular: formulario arriba, tabla abajo */
+  .detalle {
+    display: grid;
+    gap: var(--esp-4);
+    margin-top: var(--esp-4);
+  }
+
+  /* Escritorio: formulario a la izquierda, tabla a la derecha */
+  @media (min-width: 900px) {
+    .detalle {
+      grid-template-columns: 260px 1fr;
+      align-items: start;
+      gap: var(--esp-5);
+    }
+  }
+
+  .detalle > div {
+    min-width: 0;
+  }
+
+  /* Si la tabla no cabe, se desplaza ELLA, no toda la pagina */
+  .tabla-envoltura {
+    min-width: 0;
+    overflow-x: auto;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-m);
+  }
+
+  .comparacion {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--texto-base);
+  }
+
+  .comparacion caption {
+    padding: var(--esp-3);
+    text-align: left;
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+  }
+
+  .comparacion th,
+  .comparacion td {
+    padding: var(--esp-3);
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid var(--color-borde);
+  }
+
+  /* Encabezado azul oscuro con texto blanco: contraste de 11 a 1 */
+  .comparacion thead th {
+    background: var(--color-secundario);
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .comparacion__bandera {
+    display: block;
+    width: 48px;
+    height: 32px;
+    object-fit: cover;
+    margin-bottom: var(--esp-1);
+    border-radius: 4px;
+    background: #ffffff;
+  }
+
+  /* La primera columna dice QUE se compara */
+  .comparacion tbody th {
+    width: 28%;
+    font-weight: 700;
+    color: var(--color-texto);
+  }
+
+  /* Filas alternas: ayudan al ojo a seguir la fila sin perderse */
+  .comparacion tbody tr:nth-child(even) {
+    background: var(--color-lienzo);
+  }
+
+  /* Fila distinta: borde grueso + simbolo + texto (no solo color) */
+  .fila--distinta th {
+    box-shadow: inset 4px 0 0 var(--color-marca);
+  }
+
+  .fila__aviso {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: var(--esp-1);
+    padding: 0.15rem 0.5rem;
+    font-size: var(--texto-xs);
+    font-weight: 700;
+    color: var(--color-marca-profundo);
+    background: var(--color-marca-suave);
+    border: 1px solid var(--color-marca-borde);
+    border-radius: var(--radio-pildora);
+  }
+
+  .comparacion tbody th .fila__aviso {
+    display: flex;
+    width: fit-content;
+  }
+
+  .fila__aviso[hidden] {
+    display: none !important;
+  }
+
+  .leyenda {
+    margin: var(--esp-2) 0 0;
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+  }
+
+  /* :global porque el navegador vuelve a crear estas piezas sin el
+     atributo de alcance que Astro agrega a los estilos */
+  .comparacion :global(.chips) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--esp-1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .comparacion :global(.chip) {
+    padding: 0.2rem 0.6rem;
+    font-size: var(--texto-s);
+    line-height: 1.4;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde-fuerte);
+    border-radius: var(--radio-pildora);
+    white-space: nowrap;
+  }
+
+  .comparacion :global(.conteo) {
+    display: block;
+    margin-top: var(--esp-1);
+    font-size: var(--texto-xs);
+    color: var(--color-texto-suave);
+  }
+
+  /* Dato no disponible: cursiva, borde punteado y texto explicito */
+  .comparacion :global(.sin-dato) {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    font-style: italic;
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+    border: 1px dashed var(--color-borde-fuerte);
+    border-radius: var(--radio-s);
+  }
+
+  /* Celular angosto: menos relleno para que quepan las dos columnas */
+  @media (max-width: 480px) {
+    .comparacion th,
+    .comparacion td {
+      padding: var(--esp-2);
+    }
+    .comparacion tbody th {
+      width: 30%;
+    }
+  }
 </style>

@@ -5,7 +5,7 @@ const { actual = 1, total = 3 } = Astro.props;
 const paginas = Array.from({ length: total }, (_, i) => i + 1);
 ---
 
-<nav class="paginacion" aria-label="Paginas del catalogo">
+<nav class="paginacion" aria-label="Páginas del catálogo">
   <button class="paginacion__boton" type="button" disabled={actual === 1}>Anterior</button>
   <ol class="paginacion__lista">
     {paginas.map((n) => (
@@ -14,7 +14,7 @@ const paginas = Array.from({ length: total }, (_, i) => i + 1);
           class="paginacion__boton paginacion__numero"
           type="button"
           aria-current={n === actual ? "page" : undefined}
-          aria-label={`Pagina ${n}`}
+          aria-label={`Página ${n}`}
         >
           {n}
         </button>

@@ -1,53 +1,64 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Filtros from "../components/catalogo/Filtros.astro";
+import Comparador from "../components/catalogo/Comparador.astro";
 import BarraDeBusqueda from "../components/catalogo/BarraDeBusqueda.astro";
 import CardGrid from "../components/catalogo/CardGrid.astro";
 import Paginacion from "../components/catalogo/Paginacion.astro";
-import { recetas, categorias, dificultades } from "../data/datos-de-prueba.js";
+import { obtenerPaises } from "../services/api.js";
+ 
+const paises = await obtenerPaises();
+// Lista de regiones sin repetidos, en orden alfabetico
+const regiones = [...new Set(paises.map((p) => p.region))].sort((a, b) => a.localeCompare(b, "es"));
+const idiomas = [...new Set(paises.flatMap((p) => p.idiomas))].sort((a, b) => a.localeCompare(b, "es"));
+const monedas = [...new Set(paises.flatMap((p) => p.monedas))].sort((a, b) => a.localeCompare(b, "es"));
+ 
 ---
-
+ 
 <Layout
-  titulo="Catalogo — SaborU"
-  descripcion="Catalogo de recetas rapidas con tiempo y dificultad visibles."
+  titulo="Catálogo — Destino Abierto"
+  descripcion="Catálogo de países para comparar destinos de viaje o intercambio académico."
   activo="catalogo"
 >
   <div class="contenedor">
-    <p class="rotulo">Catalogo</p>
-    <h1>Que puedes cocinar hoy</h1>
+    <p class="rotulo">Catálogo</p>
+    <h1>Elige tus destinos</h1>
     <p class="entrada">
-      Filtra por categoria o por dificultad. Cada ficha indica cuanto tarda de
-      verdad, no cuanto dura el video.
+      Filtra por región o elige dos países para verlos lado a lado: capital,
+      población, idiomas, moneda y husos horarios en una sola pantalla.
     </p>
-
+ 
     <div class="catalogo">
-      <Filtros categorias={categorias} dificultades={dificultades} />
-
+      <div class="catalogo__lateral">
+        <Comparador paises={paises} />
+       <Filtros regiones={regiones} idiomas={idiomas} monedas={monedas} />
+      </div>
+ 
       <div class="catalogo__resultados">
-        <BarraDeBusqueda />
+        <BarraDeBusqueda placeholder="Buscar país por nombre" />
         <p class="catalogo__conteo" role="status">
-          <strong>{recetas.length}</strong> recetas encontradas
+          <strong>{paises.length}</strong> países encontrados
         </p>
-        <CardGrid recetas={recetas} />
+        <CardGrid paises={paises} />
         <Paginacion actual={1} total={3} />
       </div>
     </div>
   </div>
 </Layout>
-
+ 
 <style>
   .entrada {
     max-width: var(--ancho-lectura);
     color: var(--color-texto-suave);
   }
-
+ 
   /* Celular: filtros arriba y resultados debajo (una sola columna) */
   .catalogo {
     display: grid;
     gap: var(--esp-4);
     margin-top: var(--esp-5);
   }
-
+ 
   /* Escritorio: barra lateral de 240 px y el resto para las tarjetas */
   @media (min-width: 900px) {
     .catalogo {
@@ -56,20 +67,25 @@ import { recetas, categorias, dificultades } from "../data/datos-de-prueba.js";
       align-items: start;
     }
   }
-
+ 
+  .catalogo__lateral {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-4);
+    min-width: 0;
+  }
+ 
   .catalogo__resultados {
     min-width: 0; /* un hijo de Grid no se encoge por debajo de su contenido sin esto */
   }
-
+ 
   .catalogo__conteo {
     margin: var(--esp-3) 0;
     font-size: var(--texto-s);
     color: var(--color-texto-suave);
   }
-
+ 
   .catalogo__conteo strong {
     color: var(--color-texto);
   }
 </style>
-
- 

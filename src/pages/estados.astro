@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardGrid from "../components/catalogo/CardGrid.astro";
+import Esqueleto from "../components/ui/Esqueleto.astro";
+import Estado from "../components/ui/Estado.astro";
+import Boton from "../components/ui/Boton.astro";
+import { paises } from "../data/datos-de-prueba.js";
+
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout
+  titulo="Los cuatro estados — Destino Abierto"
+  descripcion="Referencia de interfaz: cargando, con datos, vacío y error."
+  activo="catalogo"
+>
+  <div class="contenedor">
+    <p class="rotulo">Referencia de interfaz</p>
+    <h1>Los cuatro estados</h1>
+    <p class="entrada">
+      Toda pantalla que muestra datos existe en cuatro versiones. Diseñar solo
+      la segunda es diseñar la cuarta parte de la pantalla.
+    </p>
+
+    <section class="bloque">
+      <h2>1. Cargando</h2>
+      <p class="bloque__ayuda">Bloques con la forma del contenido que va a llegar.</p>
+      <Esqueleto cantidad={3} />
+    </section>
+
+    <section class="bloque">
+      <h2>2. Con datos</h2>
+      <p class="bloque__ayuda">El caso que todo el mundo diseña.</p>
+      <CardGrid paises={paises.slice(0, 3)} />
+    </section>
+
+    <section class="bloque">
+      <h2>3. Vacío</h2>
+      <p class="bloque__ayuda">Dice qué pasó, por qué, y ofrece una salida.</p>
+      <Estado
+        tipo="vacio"
+        titulo="No encontramos países con ese nombre"
+        mensaje="Revisa la ortografía o escribe solo una parte del nombre, por ejemplo «Colom»."
+      >
+        <Boton href={`${base}catalogo`}>Ver todos los países</Boton>
+      </Estado>
+    </section>
+
+    <section class="bloque">
+      <h2>4. Error</h2>
+      <p class="bloque__ayuda">En español y sin códigos. El usuario no tiene la culpa de que la red falle.</p>
+      <Estado
+        tipo="error"
+        titulo="No pudimos cargar los países"
+        mensaje="Puede ser tu conexión o el servicio de datos. Vuelve a intentarlo en unos segundos."
+      >
+        <Boton>Reintentar</Boton>
+      </Estado>
+    </section>
+
+    <aside class="aviso">
+      <p class="aviso__titulo">Aviso técnico sobre los datos reales</p>
+      <p>
+        Algunos países no tienen capital registrada, o la API no trae sus
+        idiomas o monedas. Eso es un <em>dato no disponible</em>: la comparación
+        lo muestra como «Dato no disponible», no deja la celda en blanco y no es
+        el estado de <em>Error</em>. Confundirlos es el fallo más común.
+      </p>
+    </aside>
+  </div>
+</Layout>
+
+<style>
+  .entrada {
+    max-width: var(--ancho-lectura);
+    color: var(--color-texto-suave);
+  }
+
+  .bloque {
+    padding-top: var(--esp-5);
+    margin-top: var(--esp-5);
+    border-top: 1px solid var(--color-borde);
+  }
+
+  .bloque h2 {
+    margin-bottom: var(--esp-1);
+  }
+
+  .bloque__ayuda {
+    margin: 0 0 var(--esp-4);
+    font-size: var(--texto-s);
+    color: var(--color-texto-suave);
+  }
+
+  .aviso {
+    margin-top: var(--esp-6);
+    padding: var(--esp-4);
+    background: var(--color-marca-suave);
+    border: 1px solid var(--color-marca-borde);
+    border-radius: var(--radio-m);
+  }
+
+  .aviso p {
+    margin: 0;
+  }
+
+  .aviso__titulo {
+    font-weight: 700;
+    color: var(--color-marca-oscuro);
+    margin-bottom: var(--esp-1) !important;
+  }
+
+  .aviso code {
+    padding: 0.1rem 0.35rem;
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+</style>
